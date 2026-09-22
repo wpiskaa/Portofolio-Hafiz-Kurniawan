@@ -3,81 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — Hafiz Kurniawan | IT Developer & Software Engineer</title>
-  <meta name="description" content="Portfolio profesional Hafiz Kurniawan, seorang IT Developer & Software Engineer lulusan Universitas Muhammadiyah Yogyakarta. Full-Stack, Desktop App, dan Creative Tech." />
+  <title>Hafiz Kurniawan — Portfolio | IT Developer & Software Engineer</title>
+  <meta name="description" content="Portfolio kreatif Hafiz Kurniawan, IT Developer & Software Engineer Universitas Muhammadiyah Yogyakarta. Full-Stack, Desktop C#, dan Creative Tech." />
 
-  <!-- Google Fonts: Space Grotesk, Outfit, Plus Jakarta Sans, Caveat (Handwritten Doodles), JetBrains Mono, DM Sans -->
+  <!-- Google Fonts: Syne (Ultra Bold Display), Fredoka & Righteous (Chunky playful), Caveat & Kalam (Doodle handwriting), Plus Jakarta Sans (Clean body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@600;700&family=Kalam:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Righteous&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['DM Sans', 'sans-serif'],
-            outfit: ['Outfit', 'sans-serif'],
-            grotesk: ['Space Grotesk', 'sans-serif'],
-            jakarta: ['Plus Jakarta Sans', 'sans-serif'],
-            hand: ['Caveat', 'cursive'],
-            mono: ['JetBrains Mono', 'monospace'],
+            display: ['Syne', 'sans-serif'],
+            chunky: ['Righteous', 'Fredoka', 'sans-serif'],
+            hand: ['Caveat', 'Kalam', 'cursive'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
           },
-          keyframes: {
-            'float-slow': {
-              '0%':   { transform: 'translateY(0px) rotate(0deg) scale(1)' },
-              '25%':  { transform: 'translateY(-20px) rotate(2deg) scale(1.02)' },
-              '50%':  { transform: 'translateY(-10px) rotate(-1.5deg) scale(0.99)' },
-              '75%':  { transform: 'translateY(-26px) rotate(1deg) scale(1.02)' },
-              '100%': { transform: 'translateY(0px) rotate(0deg) scale(1)' },
-            },
-            'float-reverse': {
-              '0%':   { transform: 'translateY(0px) rotate(0deg)' },
-              '30%':  { transform: 'translateY(18px) rotate(-2deg)' },
-              '60%':  { transform: 'translateY(8px) rotate(1deg)' },
-              '100%': { transform: 'translateY(0px) rotate(0deg)' },
-            },
-            'float-wiggle': {
-              '0%, 100%': { transform: 'rotate(-3deg) translateY(0)' },
-              '50%': { transform: 'rotate(2deg) translateY(-8px)' },
-            },
-            'spin-slow': {
-              from: { transform: 'rotate(0deg)' },
-              to:   { transform: 'rotate(360deg)' },
-            },
-            'pulse-glow': {
-              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
-              '50%':       { opacity: '0.9', transform: 'scale(1.05)' },
-            },
-            'shimmer': {
-              '0%':   { backgroundPosition: '-200% center' },
-              '100%': { backgroundPosition: '200% center' },
-            },
-            'morph': {
-              '0%,100%': { borderRadius: '38% 62% 63% 37% / 41% 44% 56% 59%' },
-              '25%':     { borderRadius: '55% 45% 40% 60% / 60% 38% 62% 40%' },
-              '50%':     { borderRadius: '48% 52% 57% 43% / 50% 60% 40% 50%' },
-              '75%':     { borderRadius: '30% 70% 55% 45% / 47% 53% 47% 53%' },
-            },
-            'bounce-dot': {
-              '0%, 100%': { transform: 'scale(1)' },
-              '50%': { transform: 'scale(1.35)' },
-            },
-          },
-          animation: {
-            'float-slow':    'float-slow 9s ease-in-out infinite',
-            'float-reverse': 'float-reverse 11s ease-in-out infinite',
-            'float-wiggle':  'float-wiggle 5s ease-in-out infinite',
-            'spin-slow':     'spin-slow 24s linear infinite',
-            'pulse-glow':    'pulse-glow 3.5s ease-in-out infinite',
-            'shimmer':       'shimmer 3s linear infinite',
-            'morph':         'morph 11s ease-in-out infinite',
-            'bounce-dot':    'bounce-dot 2s ease-in-out infinite',
-          },
-        },
-      },
+          colors: {
+            brand: {
+              purple: '#6C5CE7',
+              lime: '#D4FF00',
+              cyan: '#00D2D3',
+              pink: '#FF5E7E',
+              yellow: '#FED330',
+              dark: '#0C0A14',
+              darkcard: '#161324',
+              darkcard2: '#1D1A30',
+            }
+          }
+        }
+      }
     };
   </script>
 
@@ -87,472 +47,179 @@
 
   <style>
     /* ═══════════════════════════════════════════════════════
-       THEME CSS VARIABLES — Light default (fresh & elegant), .dark toggle
+       THEME VARIABLES
     ═══════════════════════════════════════════════════════ */
     :root {
-      --bg:              #F8F9FE;
-      --bg2:             #EFF1FA;
-      --bg-card:         #FFFFFF;
-      --surface:         #FFFFFF;
-      --card:            rgba(255,255,255,0.92);
-      --card-solid:      #FFFFFF;
-      --border:          rgba(108,99,255,0.14);
-      --border-strong:   rgba(108,99,255,0.28);
-      --border-soft:     rgba(108,99,255,0.08);
-      --primary:         #6355FF;
-      --primary-rgb:     99,85,255;
-      --primary-light:   #857BFF;
-      --primary-dark:    #4D3DE0;
-      --secondary:       #00C9A7;
-      --secondary-rgb:   0,201,167;
-      --accent:          #FF597B;
-      --accent-rgb:      255,89,123;
-      --accent2:         #FFB347;
-      --accent2-rgb:     255,179,71;
-      --lime:            #84CC16;
-      --text:            #121124;
-      --text-muted:      #525774;
-      --text-soft:       #8E95AA;
-      --glass:           rgba(255,255,255,0.85);
-      --glass-border:    rgba(108,99,255,0.18);
-      --glass-blur:      blur(20px);
-      --shadow-sm:       0 3px 14px rgba(99,85,255,0.06);
-      --shadow:          0 8px 30px rgba(99,85,255,0.09);
-      --shadow-lg:       0 18px 50px rgba(99,85,255,0.15);
-      --shadow-xl:       0 28px 75px rgba(99,85,255,0.2);
-      --orb-opacity:     0.12;
-      --dot-color:       rgba(99,85,255,0.1);
-      --nav-bg:          rgba(248,249,254,0.9);
-      --scrollbar-track: #EFF1FA;
-      --doodle-color:    #6355FF;
-      --speech-bg:       #FFDE59;
-      --speech-text:     #121124;
+      --bg-page:        #F6F5FC;
+      --text-main:      #12111A;
+      --text-muted:     #57536E;
+      --section-dark:   #121020;
+      --section-card:   #1A172E;
+      --card-border:    rgba(255,255,255,0.1);
+      --lime:           #D4FF00;
+      --purple:         #6C5CE7;
+      --cyan:           #00D2D3;
+      --yellow:         #FED330;
+      --pink:           #FF5E7E;
+      --theme-knob-pos: 2px;
     }
 
     html.dark {
-      --bg:              #0D0C18;
-      --bg2:             #141328;
-      --bg-card:         #191832;
-      --surface:         #1B1936;
-      --card:            rgba(27,25,54,0.92);
-      --card-solid:      #191832;
-      --border:          rgba(130,120,255,0.22);
-      --border-strong:   rgba(130,120,255,0.45);
-      --border-soft:     rgba(130,120,255,0.1);
-      --primary:         #8278FF;
-      --primary-rgb:     130,120,255;
-      --primary-light:   #A49DFF;
-      --primary-dark:    #6A62E0;
-      --secondary:       #00E5BC;
-      --secondary-rgb:   0,229,188;
-      --accent:          #FF6B8B;
-      --accent-rgb:      255,107,139;
-      --accent2:         #FFCA5A;
-      --accent2-rgb:     255,202,90;
-      --lime:            #A3E635;
-      --text:            #F3F2FD;
-      --text-muted:      #A3A0C8;
-      --text-soft:       #6C6793;
-      --glass:           rgba(25,24,50,0.85);
-      --glass-border:    rgba(130,120,255,0.28);
-      --glass-blur:      blur(20px);
-      --shadow-sm:       0 3px 14px rgba(0,0,0,0.35);
-      --shadow:          0 8px 30px rgba(0,0,0,0.45);
-      --shadow-lg:       0 18px 50px rgba(130,120,255,0.22);
-      --shadow-xl:       0 28px 75px rgba(130,120,255,0.28);
-      --orb-opacity:     0.22;
-      --dot-color:       rgba(130,120,255,0.08);
-      --nav-bg:          rgba(13,12,24,0.92);
-      --scrollbar-track: #141328;
-      --doodle-color:    #FFCA5A;
-      --speech-bg:       #38BDF8;
-      --speech-text:     #0F172A;
+      --bg-page:        #0C0A14;
+      --text-main:      #F7F6FD;
+      --text-muted:     #9E9AB7;
+      --section-dark:   #141124;
+      --section-card:   #1D1934;
+      --card-border:    rgba(255,255,255,0.12);
+      --theme-knob-pos: 24px;
     }
-
-    /* ═══════════════════════════════════════════════════════
-       GLOBAL RESET & BASE
-    ═══════════════════════════════════════════════════════ */
-    *, *::before, *::after { box-sizing: border-box; }
-
-    html { background: var(--bg); }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      font-optical-sizing: auto;
-      background: var(--bg);
-      color: var(--text);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      transition: background 0.4s ease, color 0.4s ease;
+      transition: background-color 0.35s ease, color 0.35s ease;
     }
-
-    /* Dot grid background pattern */
-    body::after {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: radial-gradient(var(--dot-color) 1.2px, transparent 1.2px);
-      background-size: 30px 30px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
-    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 99px; }
 
     /* ═══════════════════════════════════════════════════════
-       TYPOGRAPHY VARIATIONS
+       REFERENCE VISUAL MOTIFS (Blobs, Doodles, Stickers)
     ═══════════════════════════════════════════════════════ */
-    .font-hand { font-family: 'Caveat', cursive; }
-    .font-outfit { font-family: 'Outfit', sans-serif; }
-    .font-grotesk { font-family: 'Space Grotesk', sans-serif; }
-    .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .font-mono-code { font-family: 'JetBrains Mono', monospace; }
 
-    h1, h2, h3 {
-      font-family: 'Outfit', 'Space Grotesk', sans-serif;
-    }
-
-    /* Gradient texts */
-    .text-gradient {
-      background: linear-gradient(135deg, var(--primary) 0%, #A78BFA 45%, var(--secondary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .text-gradient-warm {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .text-gradient-shimmer {
-      background: linear-gradient(90deg, var(--primary), #A78BFA, var(--secondary), var(--primary));
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: shimmer 4s linear infinite;
-    }
-
-    /* Hand-drawn doodle circle around text */
-    .doodle-circle {
-      position: relative;
-      display: inline-block;
-      padding: 0 0.4rem;
-      white-space: nowrap;
-    }
-    .doodle-circle svg {
+    /* Organic Corner Splash Blobs */
+    .splash-blob-purple {
       position: absolute;
-      left: -8px; top: -6px;
-      width: calc(100% + 16px);
-      height: calc(100% + 12px);
+      top: -60px;
+      left: -60px;
+      width: 440px;
+      height: 380px;
+      background: linear-gradient(135deg, #6C5CE7 0%, #A29BFE 100%);
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      filter: blur(0px);
+      z-index: 1;
       pointer-events: none;
+      opacity: 0.95;
     }
 
-    /* Hand-drawn underline squiggle */
-    .doodle-squiggle {
-      position: relative;
-      display: inline-block;
-    }
-    .doodle-squiggle svg {
+    .splash-blob-cyan {
       position: absolute;
-      bottom: -10px; left: 0;
-      width: 100%;
-      height: 12px;
+      top: 520px;
+      left: -80px;
+      width: 320px;
+      height: 320px;
+      background: linear-gradient(135deg, #00D2D3 0%, #54A0FF 100%);
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      z-index: 1;
       pointer-events: none;
+      opacity: 0.9;
     }
 
-    /* Handwritten Speech Bubble Badge */
-    .speech-bubble {
+    /* Speech Bubble from Reference */
+    .speech-bubble-cyan {
       position: relative;
-      background: var(--speech-bg);
-      color: var(--speech-text);
-      font-family: 'Caveat', cursive;
-      font-weight: 700;
-      font-size: 1.15rem;
-      padding: 0.45rem 1.1rem;
+      background: #00D2D3;
+      color: #0C0A14;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      padding: 0.6rem 1.2rem;
       border-radius: 20px;
-      border: 2px solid #121124;
-      box-shadow: 3px 3px 0px #121124;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      box-shadow: 0 4px 14px rgba(0, 210, 211, 0.4);
       transform: rotate(-3deg);
-      transition: transform 0.3s ease;
     }
-    .speech-bubble:hover {
-      transform: rotate(1deg) scale(1.04);
-    }
-    .speech-bubble::after {
+    .speech-bubble-cyan::after {
       content: '';
       position: absolute;
-      bottom: -9px; left: 24px;
-      width: 0; height: 0;
-      border-style: solid;
-      border-width: 9px 8px 0 0;
-      border-color: var(--speech-bg) transparent transparent transparent;
+      bottom: -8px;
+      left: 20px;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #00D2D3;
     }
 
-    /* Sticker label */
-    .sticker-tag {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 800;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      padding: 0.35rem 0.85rem;
-      border-radius: 8px;
-      border: 2px solid #121124;
-      box-shadow: 2.5px 2.5px 0px #121124;
-      display: inline-block;
-      transform: rotate(2deg);
-    }
-    html.dark .sticker-tag {
-      border-color: rgba(255,255,255,0.8);
-      box-shadow: 2.5px 2.5px 0px rgba(255,255,255,0.8);
-    }
-
-    /* Section label */
-    .section-label {
+    /* Lime Pill Button from Reference */
+    .btn-lime {
+      background: #D4FF00;
+      color: #0C0A14 !important;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--primary);
-      font-weight: 700;
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 50px;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-    }
-
-    /* ═══════════════════════════════════════════════════════
-       GLASS & CARD COMPONENTS
-    ═══════════════════════════════════════════════════════ */
-    .glass {
-      background: var(--glass);
-      backdrop-filter: var(--glass-blur);
-      -webkit-backdrop-filter: var(--glass-blur);
-      border: 1px solid var(--glass-border);
-      transition: background 0.4s ease, border-color 0.4s ease;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.35s ease, transform 0.35s ease;
-    }
-
-    .card-hover:hover {
-      border-color: var(--border-strong);
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-5px);
-    }
-
-    /* Bento Cards */
-    .bento-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.35s cubic-bezier(.25,.8,.25,1), box-shadow 0.35s ease, border-color 0.3s ease;
-    }
-    .bento-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-xl);
-      border-color: var(--border-strong);
-    }
-
-    /* ═══════════════════════════════════════════════════════
-       NAVIGATION
-    ═══════════════════════════════════════════════════════ */
-    .nav-link {
-      position: relative;
-      color: var(--text-muted);
-      transition: color 0.3s ease;
-      font-size: 0.92rem;
-      font-weight: 600;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px; left: 0;
-      width: 0; height: 2.5px;
-      background: var(--primary);
-      border-radius: 99px;
-      transition: width 0.3s ease;
-    }
-    .nav-link:hover { color: var(--primary); }
-    .nav-link:hover::after { width: 100%; }
-
-    /* Theme toggle */
-    .theme-toggle {
-      width: 48px; height: 26px;
-      background: var(--bg2);
-      border: 1.5px solid var(--border);
-      border-radius: 99px;
-      position: relative;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      padding: 2px;
-    }
-    .theme-toggle-knob {
-      width: 20px; height: 20px;
-      background: var(--primary);
-      border-radius: 50%;
-      transition: transform 0.35s cubic-bezier(.34,1.56,.64,1);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 11px;
-      color: white;
-    }
-    html.dark .theme-toggle-knob {
-      transform: translateX(22px);
-    }
-
-    /* ═══════════════════════════════════════════════════════
-       BUTTONS
-    ═══════════════════════════════════════════════════════ */
-    .btn-primary {
-      position: relative; overflow: hidden;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #fff !important; font-weight: 700;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      letter-spacing: 0.02em;
-      padding: 0.85rem 2rem; border-radius: 50px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 6px 24px rgba(var(--primary-rgb),0.35);
-      cursor: pointer; display: inline-flex; align-items: center; gap: 0.6rem;
+      gap: 0.6rem;
+      transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s ease;
+      box-shadow: 0 4px 20px rgba(212, 255, 0, 0.4);
       text-decoration: none;
+      cursor: pointer;
     }
-    .btn-primary::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, var(--primary-light), var(--primary));
-      opacity: 0; transition: opacity 0.3s ease;
+    .btn-lime:hover {
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 8px 30px rgba(212, 255, 0, 0.6);
     }
-    .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 10px 36px rgba(var(--primary-rgb),0.5); }
-    .btn-primary:hover::before { opacity: 1; }
-    .btn-primary span, .btn-primary svg { position: relative; z-index: 1; }
 
-    .btn-outline {
-      color: var(--text);
-      border: 1.5px solid var(--border-strong);
-      padding: 0.85rem 2rem; border-radius: 50px;
+    /* Dark Pill Button from Reference */
+    .btn-pill-dark {
+      background: #1A172E;
+      color: #FFFFFF !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      letter-spacing: 0.02em;
-      transition: all 0.3s ease;
-      cursor: pointer; display: inline-flex; align-items: center; gap: 0.6rem;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.25s ease;
       text-decoration: none;
-      background: var(--card);
-      box-shadow: var(--shadow-sm);
+      cursor: pointer;
     }
-    .btn-outline:hover {
-      background: rgba(var(--primary-rgb),0.1);
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
+    .btn-pill-dark:hover {
+      background: #25213F;
+      border-color: #D4FF00;
+      color: #D4FF00 !important;
+      transform: translateY(-2px);
     }
 
-    /* ═══════════════════════════════════════════════════════
-       TAGS & BADGES
-    ═══════════════════════════════════════════════════════ */
-    .tag {
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      padding: 0.3rem 0.8rem; border-radius: 50px;
-      font-size: 0.75rem; font-weight: 600;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: rgba(var(--primary-rgb),0.1);
-      color: var(--primary);
-      border: 1px solid rgba(var(--primary-rgb),0.22);
-      transition: all 0.25s ease;
-    }
-    .tag:hover {
-      background: rgba(var(--primary-rgb),0.18);
-      transform: translateY(-1px);
-    }
-    .tag-teal {
-      background: rgba(var(--secondary-rgb),0.12);
-      color: var(--secondary);
-      border-color: rgba(var(--secondary-rgb),0.25);
-    }
-    .tag-coral {
-      background: rgba(var(--accent-rgb),0.12);
-      color: var(--accent);
-      border-color: rgba(var(--accent-rgb),0.25);
-    }
-    .tag-amber {
-      background: rgba(var(--accent2-rgb),0.12);
-      color: var(--accent2);
-      border-color: rgba(var(--accent2-rgb),0.25);
+    /* Big Headline Typography (Dikshant-style brush) */
+    .hero-huge-title {
+      font-family: 'Syne', 'Righteous', sans-serif;
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      font-size: clamp(3.6rem, 11vw, 7.8rem);
     }
 
-    /* Filter button */
-    .filter-btn {
+    /* Sticker Note (Focus Discipline Consistency) */
+    .sticker-tape {
+      background: #D4FF00;
+      color: #0C0A14;
+      font-family: 'Syne', sans-serif;
+      font-weight: 900;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
       padding: 0.45rem 1.1rem;
-      border-radius: 99px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: var(--text-muted);
-      background: var(--card);
-      border: 1px solid var(--border);
-      transition: all 0.25s ease;
-      cursor: pointer;
-    }
-    .filter-btn.active, .filter-btn:hover {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-      box-shadow: 0 4px 16px rgba(var(--primary-rgb),0.35);
+      transform: rotate(-6deg);
+      display: inline-block;
+      box-shadow: 3px 3px 0px #0C0A14;
+      border: 2px solid #0C0A14;
     }
 
-    /* App-like skill iconsdock */
-    .app-icon {
-      width: 58px; height: 58px;
-      border-radius: 16px;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 800;
-      font-size: 1.15rem;
-      border: 1.5px solid var(--border);
-      background: var(--card);
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s ease, border-color 0.3s ease;
-      cursor: pointer;
-      position: relative;
-    }
-    .app-icon:hover {
-      transform: translateY(-8px) scale(1.08);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--primary);
-    }
-
-    /* Subtle Skill Bar */
-    .skill-track {
-      height: 5px; border-radius: 99px;
-      background: var(--bg2);
-      overflow: hidden;
-    }
-    .skill-fill {
-      height: 100%; border-radius: 99px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      position: relative;
-    }
-
-    /* ═══════════════════════════════════════════════════════
-       ORBS & FLOATING ELEMENTS
-    ═══════════════════════════════════════════════════════ */
-    .orb {
-      position: absolute; border-radius: 50%;
-      filter: blur(85px); pointer-events: none;
-      will-change: transform;
-      opacity: var(--orb-opacity);
+    /* Giant Reference Containers */
+    .container-reference-dark {
+      background: #121020;
+      border-radius: 36px;
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #FFFFFF;
+      box-shadow: 0 16px 50px rgba(0,0,0,0.3);
     }
 
     /* Custom Cursor */
@@ -560,1522 +227,854 @@
       body { cursor: none; }
       #cursor {
         position: fixed; width: 10px; height: 10px;
-        background: var(--primary); border-radius: 50%;
+        background: #D4FF00; border-radius: 50%;
         pointer-events: none; z-index: 10000;
-        transition: transform 0.15s ease;
-        mix-blend-mode: multiply;
+        transition: transform 0.12s ease;
       }
-      html.dark #cursor { mix-blend-mode: screen; }
       #cursor-ring {
-        position: fixed; width: 34px; height: 34px;
-        border: 1.5px solid rgba(var(--primary-rgb),0.5);
+        position: fixed; width: 36px; height: 36px;
+        border: 2px solid rgba(212, 255, 0, 0.7);
         border-radius: 50%;
         pointer-events: none; z-index: 9999;
         transition: transform 0.35s ease, width 0.3s ease, height 0.3s ease;
       }
     }
 
-    /* ═══════════════════════════════════════════════════════
-       MOBILE MENU
-    ═══════════════════════════════════════════════════════ */
-    #mobile-menu { transition: all 0.4s cubic-bezier(.25,.8,.25,1); }
-    #mobile-menu.closed { opacity: 0; transform: translateY(-16px); pointer-events: none; max-height: 0; overflow: hidden; }
-    #mobile-menu.open   { opacity: 1; transform: translateY(0); pointer-events: auto; max-height: 500px; }
-
-    /* Reveal */
-    .reveal { opacity: 0; transform: translateY(35px); }
-
-    /* Social btn */
-    .social-pill {
-      background: var(--card);
-      border: 1.5px solid var(--border);
-      color: var(--text-muted);
-      padding: 0.65rem 1.3rem;
-      border-radius: 50px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-sm);
+    /* Doodled circle around DOPE/AWESOME */
+    .doodle-circle-wrap {
+      position: relative;
+      display: inline-block;
+      padding: 0 0.5rem;
     }
-    .social-pill:hover {
-      color: var(--primary);
-      border-color: var(--primary);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
+    .doodle-circle-svg {
+      position: absolute;
+      left: -12px;
+      top: -10px;
+      width: calc(100% + 24px);
+      height: calc(100% + 20px);
+      pointer-events: none;
     }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: #121020; }
+    ::-webkit-scrollbar-thumb { background: #6C5CE7; border-radius: 99px; }
   </style>
 </head>
 
 <body>
 
-  <!-- Custom Cursor -->
+  <!-- Custom Cursor Elements -->
   <div id="cursor"></div>
   <div id="cursor-ring"></div>
 
   <!-- ═══════════════════════════════════════ -->
-  <!--                NAVIGATION               -->
+  <!--               TOP NAVBAR                -->
   <!-- ═══════════════════════════════════════ -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Brand Logo -->
-      <a href="#" style="text-decoration:none;" class="flex items-center gap-2 group">
-        <div class="w-10 h-10 rounded-xl flex items-center justify-center font-outfit font-black text-lg text-white shadow-md transition-transform group-hover:scale-105"
-             style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
-          HK
-        </div>
-        <div class="flex flex-col leading-tight">
-          <span class="font-outfit font-extrabold text-base tracking-tight" style="color:var(--text);">Hafiz Kurniawan</span>
-          <span class="font-mono-code text-[11px] tracking-wider" style="color:var(--text-soft);">Developer.exe</span>
-        </div>
+  <header class="relative z-30 w-full pt-6 px-6 max-w-7xl mx-auto">
+    <div class="flex items-center justify-between">
+      
+      <!-- Brand Logo: HAFIZ. with dot -->
+      <a href="#" style="text-decoration:none;" class="flex items-center gap-1 group">
+        <span class="font-display font-black text-3xl tracking-tight" style="color:var(--text-main);">HAFIZ</span>
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-purple inline-block mb-1 group-hover:bg-brand-lime transition-colors"></span>
       </a>
 
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#showcase" class="nav-link">Showcase</a>
-        <a href="#projects" class="nav-link">Proyek</a>
-        <a href="#skills"   class="nav-link">Keahlian</a>
-        <a href="#about"    class="nav-link">Tentang</a>
-        <a href="#contact"  class="nav-link">Kontak</a>
-      </div>
-
-      <!-- Right Side Controls -->
-      <div class="hidden md:flex items-center gap-4">
-        <!-- Theme Switcher -->
-        <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle dark/light mode" title="Ganti Mode Terang/Gelap">
-          <div id="theme-knob" class="theme-toggle-knob">
-            <span id="theme-icon">☀️</span>
-          </div>
-        </button>
-        <!-- Download CV dropdown/action -->
-        <a href="#cv-modal" onclick="openCvModal(event)" class="btn-outline text-xs py-2 px-4">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Unduh CV
+      <!-- Center Nav (Exact reference items with lime active line) -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#hero" class="font-display text-sm font-bold tracking-wide relative text-brand-lime group" style="text-decoration:none;">
+          Home
+          <span class="absolute -bottom-1.5 left-0 w-full h-0.5 bg-brand-lime rounded-full"></span>
         </a>
-        <a href="#contact" class="btn-primary text-xs py-2 px-5"><span>Hubungi Saya</span></a>
-      </div>
+        <a href="#showreel" class="font-display text-sm font-bold tracking-wide transition-colors hover:text-brand-lime opacity-80 hover:opacity-100" style="text-decoration:none; color:inherit;">
+          Showreel
+        </a>
+        <a href="#projects" class="font-display text-sm font-bold tracking-wide transition-colors hover:text-brand-lime opacity-80 hover:opacity-100" style="text-decoration:none; color:inherit;">
+          Projects
+        </a>
+        <a href="#skills" class="font-display text-sm font-bold tracking-wide transition-colors hover:text-brand-lime opacity-80 hover:opacity-100" style="text-decoration:none; color:inherit;">
+          Skills
+        </a>
+        <a href="#about" class="font-display text-sm font-bold tracking-wide transition-colors hover:text-brand-lime opacity-80 hover:opacity-100" style="text-decoration:none; color:inherit;">
+          About
+        </a>
+        <a href="#contact" class="font-display text-sm font-bold tracking-wide transition-colors hover:text-brand-lime opacity-80 hover:opacity-100" style="text-decoration:none; color:inherit;">
+          Contact
+        </a>
+      </nav>
 
-      <!-- Mobile Hamburger & Toggle -->
-      <div class="md:hidden flex items-center gap-3">
-        <button id="theme-toggle-btn-mobile" class="theme-toggle" aria-label="Toggle mode">
-          <div id="theme-knob-mobile" class="theme-toggle-knob">
-            <span id="theme-icon-mobile">☀️</span>
+      <!-- Right Action Items: Theme Toggle & Purple Action Circle -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Theme Toggle Pill -->
+        <button id="theme-toggle" class="w-12 h-6 rounded-full bg-brand-darkcard border border-white/20 relative p-0.5 flex items-center transition-colors" title="Ganti Mode Terang/Gelap" aria-label="Toggle Theme">
+          <div id="theme-knob" class="w-5 h-5 rounded-full bg-brand-lime flex items-center justify-center text-[10px] font-bold text-slate-900 transition-transform">
+            ☀️
           </div>
         </button>
-        <button id="menu-btn" class="flex flex-col gap-1.5 p-2 rounded-lg" style="background:var(--bg2);" aria-label="Toggle menu">
-          <span class="w-6 h-0.5 block transition-all duration-300" style="background:var(--text);" id="bar1"></span>
-          <span class="w-4 h-0.5 block transition-all duration-300 ml-auto" style="background:var(--text);" id="bar2"></span>
-          <span class="w-6 h-0.5 block transition-all duration-300" style="background:var(--text);" id="bar3"></span>
+
+        <!-- CV Button -->
+        <a href="CV_Hafiz_Kurniawan.docx" download class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/20 text-xs font-bold font-display hover:border-brand-lime transition-colors" style="text-decoration:none; color:inherit;">
+          <span>CV .docx</span>
+        </a>
+
+        <!-- Purple Circle Menu Button (From Reference!) -->
+        <button id="mobile-menu-btn" class="w-11 h-11 rounded-full bg-brand-purple flex items-center justify-center text-white text-lg shadow-lg hover:scale-105 transition-transform" aria-label="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
         </button>
+
       </div>
+
     </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="closed md:hidden glass mx-4 mb-4 rounded-2xl border" style="border-color:var(--border);">
-      <div class="flex flex-col p-6 gap-4">
-        <a href="#showcase" class="nav-link text-base" onclick="closeMenu()">Showcase Unggulan</a>
-        <a href="#projects" class="nav-link text-base" onclick="closeMenu()">Proyek Terpilih</a>
-        <a href="#skills"   class="nav-link text-base" onclick="closeMenu()">Keahlian & Tech</a>
-        <a href="#about"    class="nav-link text-base" onclick="closeMenu()">Tentang & Riwayat</a>
-        <a href="#contact"  class="nav-link text-base" onclick="closeMenu()">Kontak</a>
-        <div class="pt-3 border-t flex flex-col gap-2" style="border-color:var(--border);">
-          <a href="CV_Hafiz_Kurniawan.docx" download class="btn-outline text-center text-xs py-2.5">
-            📄 Unduh CV (.docx)
-          </a>
-          <a href="CV_Hafiz_Kurniawan.pdf" target="_blank" download class="btn-outline text-center text-xs py-2.5">
-            📑 Unduh CV (.pdf)
-          </a>
-          <a href="#contact" class="btn-primary text-center text-xs py-2.5 mt-1" onclick="closeMenu()">
-            <span>Kirim Pesan</span>
-          </a>
-        </div>
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 p-5 rounded-2xl container-reference-dark flex flex-col gap-3 z-50 relative">
+      <a href="#hero" class="font-display text-sm font-bold text-brand-lime" onclick="closeMobileMenu()">Home</a>
+      <a href="#showreel" class="font-display text-sm font-bold text-white" onclick="closeMobileMenu()">Showreel</a>
+      <a href="#projects" class="font-display text-sm font-bold text-white" onclick="closeMobileMenu()">Featured Projects</a>
+      <a href="#skills" class="font-display text-sm font-bold text-white" onclick="closeMobileMenu()">Skills</a>
+      <a href="#about" class="font-display text-sm font-bold text-white" onclick="closeMobileMenu()">About Me</a>
+      <a href="#contact" class="font-display text-sm font-bold text-white" onclick="closeMobileMenu()">Contact</a>
+      <div class="pt-3 border-t border-white/10 flex gap-2">
+        <a href="CV_Hafiz_Kurniawan.docx" download class="btn-lime text-xs py-2 px-4 flex-1 text-center">Unduh CV .docx</a>
+        <a href="CV_Hafiz_Kurniawan.pdf" target="_blank" download class="btn-pill-dark text-xs py-2 px-4 flex-1 text-center">Unduh CV .pdf</a>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- ═══════════════════════════════════════ -->
-  <!--               HERO SECTION              -->
+  <!--        HERO SECTION (1:1 REFERENCE)     -->
   <!-- ═══════════════════════════════════════ -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-20">
-    <!-- Ambient Orbs -->
-    <div class="orb w-[550px] h-[550px] -top-20 -left-20 animate-float-slow" style="background:var(--primary); opacity:0.12;"></div>
-    <div class="orb w-[420px] h-[420px] bottom-10 right-0 animate-float-reverse" style="background:var(--secondary); opacity:0.12;"></div>
-    <div class="orb w-[300px] h-[300px] top-1/2 left-1/3 animate-pulse-glow" style="background:var(--accent); opacity:0.07;"></div>
+  <section id="hero" class="relative overflow-hidden pt-8 pb-16">
+    
+    <!-- Fluid Splash Blobs (From Reference) -->
+    <div class="splash-blob-purple"></div>
+    <div class="splash-blob-cyan"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      
+      <div class="grid lg:grid-cols-12 gap-8 items-center min-h-[580px]">
+        
+        <!-- Left Hero: Typography, Speech Bubble, Buttons, Doodles -->
+        <div class="lg:col-span-7 flex flex-col items-start pt-6">
 
-        <!-- Left Column: Typography & Pitch -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <!-- Handwritten Tag / Bubble Header -->
-          <div class="flex items-center gap-3 mb-4 flex-wrap" id="hero-badge">
-            <div class="speech-bubble">
-              <span>Let's build something epic!</span> 🚀
-            </div>
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-semibold"
-                 style="background:rgba(var(--secondary-rgb),0.1); border-color:rgba(var(--secondary-rgb),0.3); color:var(--secondary);">
-              <span class="w-2 h-2 rounded-full animate-bounce-dot" style="background:var(--secondary);"></span>
-              Available for Opportunities
-            </div>
-          </div>
-
-          <!-- Handwritten 'Hey, I'm' with doodle arrow -->
-          <div class="flex items-center gap-2 mb-1" id="hero-intro">
-            <span class="font-hand text-3xl font-bold" style="color:var(--text-muted); transform:rotate(-2deg);">
-              Hey, Saya
-            </span>
-            <svg width="40" height="25" viewBox="0 0 50 30" fill="none" class="text-primary" style="color:var(--primary);">
-              <path d="M5 5 C 20 20, 35 15, 42 22 M34 22 L44 23 L42 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-
-          <!-- Main Typographic Headline -->
-          <h1 class="font-outfit font-black tracking-tight leading-[0.95] mb-5" id="hero-h1" style="font-size:clamp(3.2rem,8.5vw,6.4rem);">
-            <span class="block" style="color:var(--text);">HAFIZ</span>
-            <span class="block text-gradient">KURNIAWAN.</span>
-          </h1>
-
-          <!-- Role Subtitle with varied styling -->
-          <p class="font-outfit text-lg sm:text-2xl font-bold tracking-tight mb-4" id="hero-roles" style="color:var(--text-muted);">
-            <span style="color:var(--primary);">IT Developer</span> • 
-            <span style="color:var(--secondary);">Software Engineer</span> • 
-            <span class="font-hand text-2xl font-bold" style="color:var(--accent); font-style:italic;">Creative Tech</span>
-          </p>
-
-          <!-- Bio Pitch -->
-          <p class="text-base sm:text-lg leading-relaxed mb-8 max-w-xl font-normal" id="hero-sub" style="color:var(--text-muted);">
-            Mahasiswa S1 Teknologi Informasi di <strong style="color:var(--text);">Universitas Muhammadiyah Yogyakarta</strong>. Memadukan logika komputasi yang kokoh dengan estetika visual elegan untuk membangun solusi digital yang berdampak nyata.
-          </p>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto" id="hero-cta">
-            <a href="#showcase" class="btn-primary">
-              <span>Jelajahi Showcase</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-            </a>
-            <a href="#projects" class="btn-outline">
-              <span>Daftar Proyek</span>
-              <span class="text-xs px-2 py-0.5 rounded-full font-mono-code font-bold" style="background:var(--bg2); color:var(--primary);">8+</span>
-            </a>
-            <a href="#about" class="text-sm font-bold flex items-center gap-1.5 hover:underline py-2 px-3" style="color:var(--text-muted);">
-              <span>Tentang Saya</span> →
-            </a>
-          </div>
-
-          <!-- Quick Tech Pills -->
-          <div class="flex flex-wrap items-center gap-2 mt-8 pt-6 border-t w-full" id="hero-tags" style="border-color:var(--border-soft);">
-            <span class="text-xs font-mono-code uppercase tracking-wider font-bold" style="color:var(--text-soft);">Stack Utama:</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag tag-teal">Node.js</span>
-            <span class="tag tag-coral">C# (.NET)</span>
-            <span class="tag tag-amber">SQLite & SQL</span>
-            <span class="tag">Tailwind</span>
-            <span class="tag tag-teal">Roblox Lua</span>
-          </div>
-
-        </div>
-
-        <!-- Right Column: Visual Character / Photo Frame with Stickers (Inspired by reference UI!) -->
-        <div class="lg:col-span-5 flex justify-center lg:justify-end relative">
-          <div class="relative w-full max-w-[380px] sm:max-w-[420px]" id="hero-card-frame">
+          <!-- Top Row: "Hey, I'm" with Doodle Arrow + Speech Bubble -->
+          <div class="flex items-center gap-6 mb-2 flex-wrap">
             
-            <!-- Doodle Crown over photo -->
-            <div class="absolute -top-7 left-12 z-20 animate-float-wiggle">
-              <svg width="50" height="38" viewBox="0 0 60 45" fill="none">
-                <path d="M6 38 L14 12 L28 26 L44 8 L52 38 Z" fill="#FFDE59" stroke="#121124" stroke-width="3" stroke-linejoin="round"/>
-                <circle cx="14" cy="10" r="4" fill="#FF597B" stroke="#121124" stroke-width="2"/>
-                <circle cx="44" cy="6" r="4" fill="#00C9A7" stroke="#121124" stroke-width="2"/>
-                <circle cx="28" cy="24" r="3.5" fill="#6355FF" stroke="#121124" stroke-width="2"/>
+            <!-- Handwritten "Hey, I'm" with curving white/dark arrow -->
+            <div class="flex items-center gap-2">
+              <span class="font-hand text-3xl sm:text-4xl font-bold" style="transform: rotate(-3deg);">
+                Hey, I'm
+              </span>
+              <svg width="42" height="32" viewBox="0 0 50 38" fill="none" style="transform: rotate(10deg);">
+                <path d="M4 6 C 18 24, 34 18, 42 28 M32 28 L44 30 L42 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
 
-            <!-- Floating Sticker Badge Top Right -->
-            <div class="absolute -top-3 -right-3 sm:-right-6 z-20 sticker-tag" style="background:#00C9A7; color:#121124;">
-              ⚡ CODE & CREATE
+            <!-- Cyan Speech Bubble: "LET'S CREATE SOMETHING AWESOME!" -->
+            <div class="speech-bubble-cyan">
+              LET'S CREATE SOMETHING AWESOME!
             </div>
 
-            <!-- Main Portrait Frame -->
-            <div class="card rounded-[32px] p-3.5 relative overflow-hidden shadow-2xl"
-                 style="background: linear-gradient(145deg, var(--card), var(--bg2)); border: 2.5px solid var(--border-strong);">
+          </div>
+
+          <!-- MASSIVE DISPLAY NAME (DIKSHANT-STYLE) -->
+          <div class="relative mb-4">
+            
+            <!-- Doodle Crown 👑 over the name -->
+            <div class="absolute -top-7 left-32 sm:left-48 z-20" style="transform: rotate(-5deg);">
+              <svg width="46" height="34" viewBox="0 0 56 42" fill="none">
+                <path d="M6 36 L12 10 L28 24 L44 6 L50 36 Z" fill="#D4FF00" stroke="#0C0A14" stroke-width="3.5" stroke-linejoin="round"/>
+                <circle cx="12" cy="8" r="3.5" fill="#FF5E7E"/>
+                <circle cx="44" cy="4" r="3.5" fill="#00D2D3"/>
+                <circle cx="28" cy="22" r="3" fill="#6C5CE7"/>
+              </svg>
+            </div>
+
+            <h1 class="hero-huge-title text-black dark:text-white">
+              HAFIZ<br/>
+              <span style="color:#6C5CE7;">KURNIAWAN</span>
+            </h1>
+
+            <!-- Floating Yellow Star Doodle ⭐ -->
+            <div class="absolute -right-6 top-4 text-3xl select-none animate-pulse">⭐</div>
+          </div>
+
+          <!-- Subtitle from Reference -->
+          <p class="font-display font-bold text-base sm:text-xl tracking-wide mb-6 opacity-90">
+            Full-Stack Developer <span class="text-brand-lime">•</span> Software Engineer <span class="text-brand-purple">•</span> Creative Tech
+          </p>
+
+          <!-- Bio sentence -->
+          <p class="text-sm sm:text-base leading-relaxed max-w-lg mb-8 opacity-80">
+            Mahasiswa S1 Teknologi Informasi di Universitas Muhammadiyah Yogyakarta (NIM: 20240140024). Membangun aplikasi web modern, desktop C#, dan solusi kreatif berorientasi dampak nyata.
+          </p>
+
+          <!-- Action Buttons (Exact shape and color from reference!) -->
+          <div class="flex flex-wrap items-center gap-4 mb-8">
+            <!-- Lime button with play icon -->
+            <a href="#showreel" class="btn-lime">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Watch Showreel</span>
+            </a>
+            <!-- Pill button with arrow -->
+            <a href="#projects" class="btn-pill-dark">
+              <span>View Projects</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+          </div>
+
+          <!-- Doodles row below buttons (Smiley, Lightning, clapperboard) -->
+          <div class="flex items-center gap-6 opacity-90 select-none">
+            <!-- Green Smiley -->
+            <div class="w-8 h-8 rounded-full border-2 border-slate-900 dark:border-white flex items-center justify-center font-bold text-sm bg-brand-lime text-slate-900">
+              ツ
+            </div>
+            <!-- Yellow Lightning -->
+            <div class="text-2xl text-brand-yellow font-black">⚡</div>
+            <!-- Handwritten Tag -->
+            <span class="font-hand text-xl font-bold text-brand-purple">Available for Work ✦</span>
+          </div>
+
+        </div>
+
+        <!-- Right Hero: Character Illustration Frame (Matching Reference Composition) -->
+        <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+          
+          <div class="relative w-full max-w-[380px] sm:max-w-[420px]">
+            
+            <!-- Organic Purple Wavy Background Behind Character -->
+            <div class="absolute inset-0 rounded-[40px] bg-gradient-to-tr from-brand-purple via-indigo-600 to-purple-400 transform rotate-3 scale-105 opacity-90 shadow-2xl"></div>
+
+            <!-- Main Character Card Container -->
+            <div class="relative rounded-[36px] overflow-hidden bg-slate-900 border-4 border-slate-900 shadow-2xl z-10">
               
-              <!-- Inner Photo Box with Stylized Lighting -->
-              <div class="relative w-full h-[430px] rounded-[24px] overflow-hidden group" style="background: #141328;">
+              <!-- Character Photo -->
+              <div class="h-[440px] w-full relative overflow-hidden bg-slate-800">
                 <img src="hafiz.jpg" alt="Hafiz Kurniawan" 
-                     class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                     style="object-position: center 20%;" />
+                     class="w-full h-full object-cover object-top filter contrast-105 hover:scale-105 transition-transform duration-700" 
+                     style="object-position: center 15%;" />
+                
+                <!-- Bottom gradient fade -->
+                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
 
-                <!-- Gradient Overlay -->
-                <div class="absolute inset-0 pointer-events-none"
-                     style="background: linear-gradient(180deg, transparent 45%, rgba(13,12,24,0.75) 85%, rgba(13,12,24,0.95) 100%);"></div>
-
-                <!-- Floating sticker note inside frame -->
-                <div class="absolute bottom-5 left-5 right-5 z-10 flex items-end justify-between">
+                <!-- Floating Doodled Clapperboard / Code Badge -->
+                <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between text-white">
                   <div>
-                    <span class="font-mono-code text-[11px] font-bold uppercase tracking-wider text-emerald-300 flex items-center gap-1.5 mb-1">
-                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                      Yogyakarta, ID
-                    </span>
-                    <h2 class="font-outfit font-black text-xl text-white">Hafiz Kurniawan</h2>
-                    <p class="font-jakarta text-xs text-gray-300">TI UMY • Angkatan 2024</p>
+                    <span class="text-[11px] font-mono font-bold text-brand-lime uppercase tracking-wider block">Yogyakarta, ID</span>
+                    <h3 class="font-display font-extrabold text-xl leading-tight">Hafiz Kurniawan</h3>
+                    <p class="text-xs text-slate-300 font-sans">UMY Tech Talent • 2024</p>
                   </div>
-                  <div class="w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-white shadow-lg"
-                       style="background: var(--primary);">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  <!-- Doodled clapperboard / play box -->
+                  <div class="w-12 h-12 rounded-2xl bg-brand-lime text-slate-900 flex items-center justify-center font-black text-xl shadow-lg transform rotate-6">
+                    💻
                   </div>
+                </div>
+
+                <!-- Waving hand doodle accent 🖐️ -->
+                <div class="absolute top-6 right-6 text-3xl animate-bounce">
+                  👋
                 </div>
               </div>
 
-              <!-- Bottom frame accents -->
-              <div class="pt-3 pb-1 px-2 flex items-center justify-between text-xs font-semibold" style="color:var(--text-muted);">
-                <span class="font-hand text-lg" style="color:var(--primary);">“Logika kuat, visual elegan.”</span>
-                <span class="font-mono-code text-[11px]">NIM. 20240140024</span>
-              </div>
-
             </div>
 
-            <!-- Floating Sticker Bottom Left -->
-            <div class="absolute -bottom-5 -left-4 sm:-left-6 z-20 sticker-tag" style="background:#FFDE59; color:#121124; transform:rotate(-4deg);">
-              🎯 FOCUS • DISCIPLINE
+            <!-- Hand-drawn curved lines near the character: (( )) -->
+            <div class="absolute -left-6 top-1/3 text-2xl font-black text-brand-pink select-none">
+              ((
             </div>
 
-            <!-- Sparkle SVGs around frame -->
-            <div class="absolute top-1/2 -right-6 text-2xl animate-pulse-glow select-none pointer-events-none">✨</div>
-            <div class="absolute bottom-1/4 -left-6 text-xl animate-float-slow select-none pointer-events-none">⭐</div>
+            <!-- Floating sticker badge -->
+            <div class="absolute -bottom-4 -left-4 z-20 sticker-tape">
+              FOCUS • DISCIPLINE • CONSISTENCY
+            </div>
 
           </div>
+
         </div>
 
       </div>
+
+      <!-- Center Scroll Down Pill (Exact reference placement!) -->
+      <div class="mt-8 flex justify-center">
+        <a href="#showreel" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-900/20 dark:border-white/20 text-xs font-display font-bold hover:scale-105 transition-transform" style="text-decoration:none; color:inherit;">
+          <span class="w-3 h-4 rounded-full border border-current flex items-start justify-center p-0.5">
+            <span class="w-1 h-1.5 bg-current rounded-full animate-bounce"></span>
+          </span>
+          <span>Scroll Down</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--    SHOWREEL SECTION (1:1 REFERENCE)     -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="showreel" class="py-12 px-4 sm:px-6 max-w-7xl mx-auto">
+    
+    <!-- Dedicated Big Rounded Container from Reference -->
+    <div class="container-reference-dark p-8 sm:p-12 relative overflow-hidden">
+      
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Star icon + SHOWREEL title + description + Watch Now ▶ -->
+        <div class="lg:col-span-5 flex flex-col items-start">
+          
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-2xl text-brand-pink">☆</span>
+            <h2 class="font-display font-black text-2xl sm:text-3xl uppercase tracking-wider text-white">
+              SHOWREEL
+            </h2>
+          </div>
+
+          <p class="text-sm sm:text-base leading-relaxed text-slate-300 mb-6 font-normal">
+            A quick glimpse of my work and my love for building impactful, elegant, and production-ready digital products.
+          </p>
+
+          <!-- Watch Now ▶ (Lime green link from reference!) -->
+          <a href="https://afiyah-farmaku.onrender.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-display font-extrabold text-brand-lime text-base hover:translate-x-1 transition-transform" style="text-decoration:none;">
+            <span>Watch Now</span>
+            <div class="w-6 h-6 rounded-full bg-brand-lime text-slate-950 flex items-center justify-center text-xs">
+              ▶
+            </div>
+          </a>
+
+          <!-- Extra tech tags -->
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-white/10 text-white font-bold">Afiyah Farmaku POS</span>
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-400 font-bold">Live on Render</span>
+          </div>
+
+        </div>
+
+        <!-- Right: Cinema Thumbnail with Centered Lime Play Button (Exact reference!) -->
+        <div class="lg:col-span-7 relative">
+          
+          <!-- Doodle spark lines \\|/ -->
+          <div class="absolute -top-4 right-10 text-brand-lime font-black text-lg select-none">
+            \\|/
+          </div>
+
+          <div class="rounded-3xl overflow-hidden relative group aspect-video bg-gradient-to-tr from-purple-950 via-slate-900 to-indigo-950 border border-white/15 shadow-2xl flex items-center justify-center">
+            
+            <!-- Simulated background art / dashboard -->
+            <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#6C5CE7_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            
+            <!-- Neon sun & cityscape silhouette vibe matching reference -->
+            <div class="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-black via-purple-950/60 to-transparent"></div>
+            <div class="absolute -bottom-6 right-12 w-44 h-44 rounded-full bg-pink-500/30 blur-2xl"></div>
+
+            <!-- Mockup Info inside Showreel Preview -->
+            <div class="relative z-10 text-center px-6">
+              <span class="text-xs font-mono font-bold tracking-widest text-brand-cyan uppercase block mb-2">FLAGSHIP LIVE PRODUCT</span>
+              <h3 class="font-display font-black text-2xl sm:text-4xl text-white mb-4">AFIYAH FARMAKU</h3>
+              
+              <!-- Floating Lime Green Play Button (Exact from Reference!) -->
+              <a href="https://afiyah-farmaku.onrender.com/" target="_blank" rel="noopener noreferrer" 
+                 class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-brand-lime text-slate-950 flex items-center justify-center text-xl sm:text-2xl font-black shadow-2xl mx-auto hover:scale-110 transition-transform cursor-pointer"
+                 title="Buka Aplikasi Langsung" style="text-decoration:none;">
+                ▶
+              </a>
+
+              <p class="text-xs text-slate-300 font-mono mt-4">Klik untuk membuka live web aplikasi apotek</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- Scroll Down Pill Indicator -->
-    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-60 hover:opacity-100 transition-opacity">
-      <a href="#showcase" class="flex flex-col items-center gap-1 text-inherit" style="text-decoration:none;">
-        <span class="font-mono-code text-[10px] tracking-widest uppercase" style="color:var(--text-soft);">Scroll Down</span>
-        <div class="w-5 h-8 rounded-full border-2 flex items-start justify-center p-1" style="border-color:var(--border-strong);">
-          <div class="w-1.5 h-2 rounded-full bg-primary animate-bounce"></div>
-        </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--   FEATURED PROJECTS (1:1 REFERENCE)     -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="projects" class="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
+    
+    <!-- Header: FEATURED PROJECTS ~ and View All Projects → -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
+      <div>
+        <h2 class="font-display font-black text-3xl sm:text-4xl uppercase tracking-tight flex items-center gap-2" style="color:var(--text-main);">
+          <span>FEATURED PROJECTS</span>
+          <span class="text-brand-purple text-4xl font-hand">~</span>
+        </h2>
+        <p class="text-sm opacity-70 mt-1">Karya dan produk unggulan yang dirancang dengan presisi teknis.</p>
+      </div>
+
+      <!-- Lime link from reference: View All Projects → -->
+      <a href="https://github.com/wpiskaa" target="_blank" rel="noopener noreferrer" class="font-display font-extrabold text-sm text-brand-lime flex items-center gap-1.5 mt-3 sm:mt-0 hover:translate-x-1 transition-transform" style="text-decoration:none; color:#D4FF00;">
+        <span>View All Projects</span>
+        <span>→</span>
       </a>
     </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!--     SHOWCASE / HIGHLIGHT BANNER         -->
-  <!--  (Inspired by reference SHOWREEL card)  -->
-  <!-- ═══════════════════════════════════════ -->
-  <section id="showcase" class="py-16 relative">
-    <div class="max-w-7xl mx-auto px-6">
-      
-      <!-- Showcase Container Card -->
-      <div class="card rounded-[32px] p-6 sm:p-10 relative overflow-hidden reveal border-2"
-           style="background: linear-gradient(135deg, var(--card), var(--bg2)); border-color: var(--border-strong);">
-        
-        <!-- Decorative background glow -->
-        <div class="orb w-80 h-80 -top-10 -right-10" style="background:var(--secondary); opacity:0.1;"></div>
-        
-        <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+    <!-- 4 Horizontal Project Cards (Exact reference 4-card layout!) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-          <!-- Left Info: Showreel style pitch -->
-          <div class="lg:col-span-5 flex flex-col items-start">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="text-xl">⭐</span>
-              <span class="font-hand text-2xl font-bold" style="color:var(--secondary); transform:rotate(-1deg);">
-                Flagship Project Showcase
-              </span>
-            </div>
-            
-            <h2 class="font-outfit font-black text-2xl sm:text-4xl tracking-tight leading-tight mb-4" style="color:var(--text);">
-              AFIYAH FARMAKU
-              <span class="block text-gradient text-xl sm:text-2xl font-bold font-jakarta">Sistem Manajemen Apotek & POS</span>
-            </h2>
-
-            <p class="text-sm sm:text-base leading-relaxed mb-6" style="color:var(--text-muted);">
-              Aplikasi web full-feature untuk apotek modern: kasir POS cepat, kontrol stok obat otomatis, pelacakan laba-rugi & supplier, hak akses pegawai, serta backup database. Telah <strong style="color:var(--text);">live dan siap dipakai</strong> secara daring.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="tag tag-teal">Live on Render</span>
-              <span class="tag">JavaScript SPA</span>
-              <span class="tag tag-amber">SQLite DB</span>
-              <span class="tag tag-coral">POS Kasir</span>
-            </div>
-
-            <div class="flex flex-wrap items-center gap-3">
-              <a href="https://afiyah-farmaku.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm py-2.5 px-6">
-                <span>Buka Live Demo ↗</span>
-              </a>
-              <a href="https://afiyah-farmaku.onrender.com/" target="_blank" rel="noopener noreferrer"
-                 class="btn-outline text-sm py-2.5 px-5 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>afiyah-farmaku.onrender.com</span>
-              </a>
-            </div>
+      <!-- Card 1: Warm Yellow/Orange Top (RUN! style) -->
+      <div class="rounded-3xl overflow-hidden container-reference-dark flex flex-col group hover:-translate-y-2 transition-transform duration-300">
+        <!-- Colorful Top Preview Banner -->
+        <div class="h-44 bg-gradient-to-tr from-amber-500 via-orange-400 to-yellow-300 relative flex items-center justify-center p-4 overflow-hidden">
+          <div class="text-5xl group-hover:scale-110 transition-transform select-none">🏥</div>
+          <!-- Live Pill -->
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-slate-950/80 text-[10px] font-mono font-bold text-brand-lime">
+            LIVE WEB APP
           </div>
-
-          <!-- Right Mockup: Simulated Browser / Interactive Terminal Window -->
-          <div class="lg:col-span-7">
-            <div class="rounded-2xl overflow-hidden shadow-2xl border"
-                 style="background: #0F172A; border-color: rgba(255,255,255,0.12);">
-              
-              <!-- Browser Mockup Window Header -->
-              <div class="px-4 py-3 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
-                </div>
-                <div class="font-mono-code text-xs text-slate-400 bg-slate-800/80 px-4 py-1 rounded-full border border-slate-700/50 flex items-center gap-2">
-                  <span class="text-emerald-400">🔒</span> https://afiyah-farmaku.onrender.com
-                </div>
-                <div class="text-xs text-slate-400 font-mono-code">v2.4.0</div>
-              </div>
-
-              <!-- Mockup Content Screen -->
-              <div class="p-6 text-slate-200 font-sans" style="background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);">
-                
-                <!-- Metric Cards in mockup -->
-                <div class="grid grid-cols-3 gap-3 mb-5">
-                  <div class="bg-slate-800/90 p-3 rounded-xl border border-slate-700">
-                    <p class="text-[11px] font-mono-code text-slate-400">Total Stok</p>
-                    <p class="text-xl font-bold text-white font-outfit">142 <span class="text-xs font-normal text-emerald-400 font-sans">Item</span></p>
-                  </div>
-                  <div class="bg-slate-800/90 p-3 rounded-xl border border-slate-700">
-                    <p class="text-[11px] font-mono-code text-slate-400">Penjualan Hari Ini</p>
-                    <p class="text-xl font-bold text-emerald-400 font-outfit">Rp 1.480k</p>
-                  </div>
-                  <div class="bg-slate-800/90 p-3 rounded-xl border border-slate-700">
-                    <p class="text-[11px] font-mono-code text-slate-400">Status Server</p>
-                    <p class="text-xs font-bold text-green-400 flex items-center gap-1.5 mt-1">
-                      <span class="w-2 h-2 rounded-full bg-green-400"></span> Aktif (Online)
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Mini POS Interactive Visual Simulator -->
-                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2.5 font-mono-code text-xs">
-                  <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-                    <span class="text-slate-400">💊 Paracetamol 500mg</span>
-                    <span class="text-slate-300">2 Strip x Rp 10.000</span>
-                    <span class="font-bold text-white">Rp 20.000</span>
-                  </div>
-                  <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-                    <span class="text-slate-400">🧪 Amoxicillin 500mg</span>
-                    <span class="text-slate-300">1 Strip x Rp 18.000</span>
-                    <span class="font-bold text-white">Rp 18.000</span>
-                  </div>
-                  <div class="flex items-center justify-between pt-1 font-sans">
-                    <span class="text-slate-400 text-xs font-mono-code">TOTAL TRANSAKSI</span>
-                    <span class="text-emerald-400 font-bold text-base font-outfit">Rp 38.000</span>
-                  </div>
-                </div>
-
-                <!-- Launch Banner Bar -->
-                <div class="mt-4 flex items-center justify-between pt-3 border-t border-slate-800 text-xs">
-                  <span class="text-slate-400">Dilengkapi Backup Otomatis & Role Kasir/Owner</span>
-                  <a href="https://afiyah-farmaku.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-bold flex items-center gap-1">
-                    Coba Langsung di Web →
-                  </a>
-                </div>
-
-              </div>
-
-            </div>
+          <!-- Corner number -->
+          <div class="absolute bottom-2 right-3 font-display font-black text-4xl text-black/10 select-none">
+            01
           </div>
-
         </div>
+        <!-- Black Bottom Bar with Title, Subtitle, and Arrow ↗ (From Reference!) -->
+        <div class="p-5 flex-1 flex items-center justify-between bg-brand-darkcard">
+          <div>
+            <h3 class="font-display font-black text-base uppercase text-white tracking-wide">AFIYAH FARMAKU</h3>
+            <p class="text-xs text-slate-400 font-sans">Sistem Apotek & POS</p>
+          </div>
+          <a href="https://afiyah-farmaku.onrender.com/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-lime hover:text-slate-950 flex items-center justify-center text-sm transition-colors text-white" style="text-decoration:none;">
+            ↗
+          </a>
+        </div>
+      </div>
 
+      <!-- Card 2: Orange/Retro TV Top (DAYDREAMS style) -->
+      <div class="rounded-3xl overflow-hidden container-reference-dark flex flex-col group hover:-translate-y-2 transition-transform duration-300">
+        <div class="h-44 bg-gradient-to-tr from-red-600 via-rose-500 to-purple-600 relative flex items-center justify-center p-4 overflow-hidden">
+          <div class="text-5xl group-hover:scale-110 transition-transform select-none">🩸</div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-slate-950/80 text-[10px] font-mono font-bold text-red-400">
+            C# WINFORMS
+          </div>
+          <div class="absolute bottom-2 right-3 font-display font-black text-4xl text-white/10 select-none">
+            02
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex items-center justify-between bg-brand-darkcard">
+          <div>
+            <h3 class="font-display font-black text-base uppercase text-white tracking-wide">HEMOSCAN</h3>
+            <p class="text-xs text-slate-400 font-sans">Blood Stock Monitor</p>
+          </div>
+          <a href="https://github.com/wpiskaa/A8_HEMOSCAN" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-lime hover:text-slate-950 flex items-center justify-center text-sm transition-colors text-white" style="text-decoration:none;">
+            ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Dark Purple/Indigo Dynamic Top (LOST SIGNAL style) -->
+      <div class="rounded-3xl overflow-hidden container-reference-dark flex flex-col group hover:-translate-y-2 transition-transform duration-300">
+        <div class="h-44 bg-gradient-to-tr from-indigo-900 via-purple-700 to-pink-600 relative flex items-center justify-center p-4 overflow-hidden">
+          <div class="text-5xl group-hover:scale-110 transition-transform select-none">🎮</div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-slate-950/80 text-[10px] font-mono font-bold text-amber-300">
+            BROWSER GAME
+          </div>
+          <div class="absolute bottom-2 right-3 font-display font-black text-4xl text-white/10 select-none">
+            03
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex items-center justify-between bg-brand-darkcard">
+          <div>
+            <h3 class="font-display font-black text-base uppercase text-white tracking-wide">CHILL GAME</h3>
+            <p class="text-xs text-slate-400 font-sans">Vanilla JS & Canvas</p>
+          </div>
+          <a href="https://wpiskaa.github.io/MyWorkSpace/game.html" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-lime hover:text-slate-950 flex items-center justify-center text-sm transition-colors text-white" style="text-decoration:none;">
+            ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4: Lime Green Character Top (GROOVY TUNES style) -->
+      <div class="rounded-3xl overflow-hidden container-reference-dark flex flex-col group hover:-translate-y-2 transition-transform duration-300">
+        <div class="h-44 bg-gradient-to-tr from-pink-600 via-purple-600 to-cyan-400 relative flex items-center justify-center p-4 overflow-hidden">
+          <div class="text-5xl group-hover:scale-110 transition-transform select-none">📸</div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-slate-950/80 text-[10px] font-mono font-bold text-brand-lime">
+            PHOTOBOOTH
+          </div>
+          <div class="absolute bottom-2 right-3 font-display font-black text-4xl text-white/10 select-none">
+            04
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex items-center justify-between bg-brand-darkcard">
+          <div>
+            <h3 class="font-display font-black text-base uppercase text-white tracking-wide">PHOTOBOOTH WEB</h3>
+            <p class="text-xs text-slate-400 font-sans">Webcam & Frames</p>
+          </div>
+          <a href="https://wpiskaa.github.io/MyWorkSpace/photobooth.html" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-lime hover:text-slate-950 flex items-center justify-center text-sm transition-colors text-white" style="text-decoration:none;">
+            ↗
+          </a>
+        </div>
       </div>
 
     </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!--           FEATURED PROJECTS             -->
-  <!-- ═══════════════════════════════════════ -->
-  <section id="projects" class="py-24 relative">
-    <div class="orb w-96 h-96 right-0 top-1/4 animate-float-slow" style="background:var(--primary); opacity:0.08;"></div>
-
-    <div class="max-w-7xl mx-auto px-6">
+    <!-- Secondary Row: More Achievements & Works (Roblox, PKM-KC, Arkavidia, IT Specta) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
       
-      <!-- Section Header with Doodle Squiggle -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal">
+      <div class="p-5 rounded-3xl container-reference-dark flex items-center justify-between hover:border-brand-lime transition-colors">
         <div>
-          <div class="section-label mb-2">
-            <span>PORTFOLIO SHOWCASE</span>
-          </div>
-          <h2 class="font-outfit font-black tracking-tight" style="font-size:clamp(2.2rem,5vw,3.5rem); color:var(--text);">
-            FEATURED <span class="text-gradient">PROJECTS</span>
-            <span class="font-hand text-3xl ml-2" style="color:var(--secondary); font-weight:normal;">~</span>
-          </h2>
-          <p class="text-sm sm:text-base mt-2 max-w-lg" style="color:var(--text-muted);">
-            Koleksi aplikasi web, desktop software, dan creative tech yang dibangun dengan dedikasi tinggi.
-          </p>
+          <span class="text-[10px] font-mono text-brand-lime block font-bold">ROBLOX LUA</span>
+          <h4 class="font-display font-bold text-sm text-white">MAP UMYFIRST</h4>
+          <p class="text-xs text-slate-400">UMY VERSE Metaverse</p>
         </div>
-
-        <!-- Filter Tabs -->
-        <div class="flex flex-wrap items-center gap-2 mt-6 md:mt-0">
-          <button class="filter-btn active" onclick="filterProjects('all', this)">Semua (8)</button>
-          <button class="filter-btn" onclick="filterProjects('web', this)">Web & POS</button>
-          <button class="filter-btn" onclick="filterProjects('desktop', this)">Desktop C#</button>
-          <button class="filter-btn" onclick="filterProjects('creative', this)">Creative Tech</button>
-        </div>
+        <span class="text-xl">🗺️</span>
       </div>
 
-      <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
-
-        <!-- 1. Afiyah Farmaku -->
-        <div class="bento-card rounded-3xl overflow-hidden flex flex-col group reveal project-item" data-category="web">
-          <div class="relative h-48 overflow-hidden" style="background: linear-gradient(135deg, #0D9488, #059669);">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-            <!-- Decorative circle -->
-            <div class="absolute top-4 right-4 w-20 h-20 rounded-full bg-white/10"></div>
-            <div class="absolute top-6 left-6 text-4xl">🏥</div>
-            <!-- Number badge -->
-            <div class="absolute top-4 right-6 font-outfit text-5xl font-black text-white/20 select-none">01</div>
-            <!-- Tag overlay -->
-            <div class="absolute bottom-4 left-6 flex items-center gap-2">
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/20 text-white backdrop-blur-sm">Web App & POS</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-mono-code bg-emerald-400 text-slate-900 font-bold">LIVE</span>
-            </div>
-            <!-- Hover overlay -->
-            <a href="https://afiyah-farmaku.onrender.com/" target="_blank" rel="noopener noreferrer"
-               class="absolute inset-0 bg-emerald-800/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-bold gap-2">
-              <span>Buka Aplikasi</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-            </a>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="font-outfit font-bold text-lg text-inherit group-hover:text-primary transition-colors">Afiyah Farmaku</h3>
-                <span class="font-mono-code text-xs text-soft">2025–2026</span>
-              </div>
-              <p class="text-sm leading-relaxed mb-4" style="color:var(--text-muted);">
-                Sistem manajemen apotek terintegrasi: Kasir POS, stok obat real-time, laporan keuangan laba-rugi, dan manajemen multi-user.
-              </p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="tag">JavaScript</span><span class="tag tag-teal">SQLite</span><span class="tag">Render</span>
-              </div>
-              <a href="https://afiyah-farmaku.onrender.com/" target="_blank" rel="noopener noreferrer"
-                 class="text-xs font-bold text-primary flex items-center gap-1 hover:underline">
-                afiyah-farmaku.onrender.com ↗
-              </a>
-            </div>
-          </div>
+      <div class="p-5 rounded-3xl container-reference-dark flex items-center justify-between hover:border-brand-lime transition-colors">
+        <div>
+          <span class="text-[10px] font-mono text-brand-pink block font-bold">MEDTECH IOT</span>
+          <h4 class="font-display font-bold text-sm text-white">HEMO-SCAN (PKM-KC)</h4>
+          <p class="text-xs text-slate-400">Multi-spectral Blood Sensor</p>
         </div>
+        <span class="text-xl">🧬</span>
+      </div>
 
-        <!-- 2. HEMOSCAN (C# Desktop) -->
-        <div class="bento-card rounded-3xl overflow-hidden flex flex-col group reveal project-item" data-category="desktop">
-          <div class="relative h-48 overflow-hidden" style="background: linear-gradient(135deg, #DC2626, #7C3AED);">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-            <div class="absolute top-6 left-6 text-4xl">🩸</div>
-            <div class="absolute top-4 right-6 font-outfit text-5xl font-black text-white/20 select-none">02</div>
-            <div class="absolute bottom-4 left-6 flex items-center gap-2">
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/20 text-white backdrop-blur-sm">Desktop Software</span>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-mono-code bg-red-400 text-slate-900 font-bold">C# .NET</span>
-            </div>
-            <a href="https://github.com/wpiskaa/A8_HEMOSCAN" target="_blank" rel="noopener noreferrer"
-               class="absolute inset-0 bg-red-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-bold gap-2">
-              <span>Lihat di GitHub</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-            </a>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="font-outfit font-bold text-lg text-inherit group-hover:text-primary transition-colors">HEMOSCAN (WinForms)</h3>
-                <span class="font-mono-code text-xs text-soft">2026</span>
-              </div>
-              <p class="text-sm leading-relaxed mb-4" style="color:var(--text-muted);">
-                Aplikasi desktop C# WinForms untuk monitoring suplai darah. Dilengkapi integrasi database SQL Server, ekspor Excel, dashboard analitik, dan packaging installer Inno Setup.
-              </p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="tag tag-coral">C#</span><span class="tag">SQL Server</span><span class="tag tag-coral">WinForms</span>
-              </div>
-              <a href="https://github.com/wpiskaa/A8_HEMOSCAN" target="_blank" rel="noopener noreferrer"
-                 class="text-xs font-bold text-primary flex items-center gap-1 hover:underline">
-                github.com/wpiskaa/A8_HEMOSCAN ↗
-              </a>
-            </div>
-          </div>
+      <div class="p-5 rounded-3xl container-reference-dark flex items-center justify-between hover:border-brand-lime transition-colors">
+        <div>
+          <span class="text-[10px] font-mono text-brand-cyan block font-bold">UI/UX ITB</span>
+          <h4 class="font-display font-bold text-sm text-white">ARKAVIDIA UXVIDIA</h4>
+          <p class="text-xs text-slate-400">Babak Penyisihan Nasional</p>
         </div>
+        <span class="text-xl">🏆</span>
+      </div>
 
-        <!-- 3. Browser Game — Chill -->
-        <div class="bento-card rounded-3xl overflow-hidden flex flex-col group reveal project-item" data-category="creative">
-          <div class="relative h-48 overflow-hidden" style="background: linear-gradient(135deg, #D97706, #6355FF);">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-            <div class="absolute top-6 left-6 text-4xl">🎮</div>
-            <div class="absolute top-4 right-6 font-outfit text-5xl font-black text-white/20 select-none">03</div>
-            <div class="absolute bottom-4 left-6 flex items-center gap-2">
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/20 text-white backdrop-blur-sm">Interactive Game</span>
-            </div>
-            <a href="https://wpiskaa.github.io/MyWorkSpace/game.html" target="_blank" rel="noopener noreferrer"
-               class="absolute inset-0 bg-amber-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-bold gap-2">
-              <span>Mainkan Game</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-            </a>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="font-outfit font-bold text-lg text-inherit group-hover:text-primary transition-colors">Browser Game — Chill</h3>
-                <span class="font-mono-code text-xs text-soft">2026</span>
-              </div>
-              <p class="text-sm leading-relaxed mb-4" style="color:var(--text-muted);">
-                Mini-game interaktif berbasis HTML5 Canvas & vanilla JavaScript. Ringan, cepat, tanpa instalasi, dan responsif di semua browser.
-              </p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="tag">JavaScript</span><span class="tag tag-amber">Canvas API</span>
-              </div>
-              <a href="https://wpiskaa.github.io/MyWorkSpace/game.html" target="_blank" rel="noopener noreferrer"
-                 class="text-xs font-bold text-primary flex items-center gap-1 hover:underline">
-                Mainkan di Browser ↗
-              </a>
-            </div>
-          </div>
+      <div class="p-5 rounded-3xl container-reference-dark flex items-center justify-between hover:border-brand-lime transition-colors">
+        <div>
+          <span class="text-[10px] font-mono text-brand-yellow block font-bold">KOORDINATOR MULTIMEDIA</span>
+          <h4 class="font-display font-bold text-sm text-white">IT SPECTA 2026</h4>
+          <p class="text-xs text-slate-400">Prodi TI UMY</p>
         </div>
-
-        <!-- 4. Photobooth In-Browser -->
-        <div class="bento-card rounded-3xl overflow-hidden flex flex-col group reveal project-item" data-category="web">
-          <div class="relative h-48 overflow-hidden" style="background: linear-gradient(135deg, #DB2777, #4F46E5);">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-            <div class="absolute top-6 left-6 text-4xl">📸</div>
-            <div class="absolute top-4 right-6 font-outfit text-5xl font-black text-white/20 select-none">04</div>
-            <div class="absolute bottom-4 left-6 flex items-center gap-2">
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/20 text-white backdrop-blur-sm">Webcam App</span>
-            </div>
-            <a href="https://wpiskaa.github.io/MyWorkSpace/photobooth.html" target="_blank" rel="noopener noreferrer"
-               class="absolute inset-0 bg-pink-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-bold gap-2">
-              <span>Coba Photobooth</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-            </a>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="font-outfit font-bold text-lg text-inherit group-hover:text-primary transition-colors">Photobooth In-Browser</h3>
-                <span class="font-mono-code text-xs text-soft">2026</span>
-              </div>
-              <p class="text-sm leading-relaxed mb-4" style="color:var(--text-muted);">
-                Aplikasi foto interaktif dengan filter visual langsung di peramban web via WebRTC & Canvas, lengkap dengan pilihan frame stiker dan ekspor foto beresolusi tinggi.
-              </p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="tag">JavaScript</span><span class="tag tag-coral">WebRTC</span><span class="tag">Canvas</span>
-              </div>
-              <a href="https://wpiskaa.github.io/MyWorkSpace/photobooth.html" target="_blank" rel="noopener noreferrer"
-                 class="text-xs font-bold text-primary flex items-center gap-1 hover:underline">
-                Coba Photobooth Web ↗
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Sistem Manajemen IT Specta 2026 -->
-        <div class="bento-card rounded-3xl overflow-hidden flex flex-col group reveal project-item" data-category="web">
-          <div class="relative h-48 overflow-hidden" style="background: linear-gradient(135deg, #0D9488, #4F46E5);">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-            <div class="absolute top-6 left-6 text-4xl">📋</div>
-            <div class="absolute top-4 right-6 font-outfit text-5xl font-black text-white/20 select-none">05</div>
-            <div class="absolute bottom-4 left-6 flex items-center gap-2">
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/20 text-white backdrop-blur-sm">Event Management</span>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="font-outfit font-bold text-lg text-inherit group-hover:text-primary transition-colors">IT Specta 2026 System</h3>
-                <span class="font-mono-code text-xs text-soft">2026</span>
-              </div>
-              <p class="text-sm leading-relaxed mb-4" style="color:var(--text-muted);">
-                Sistem koordinasi multimedia dan administrasi event prodi TI UMY sebagai <strong style="color:var(--secondary);">Koordinator Divisi Multimedia</strong>.
-              </p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="tag tag-teal">HTML5/JS</span><span class="tag">Multimedia</span><span class="tag">TI UMY</span>
-              </div>
-              <span class="text-xs font-bold text-muted">Prodi Teknologi Informasi UMY</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Arkavidia UXVIDIA ITB -->
-        <div class="bento-card rounded-3xl overflow-hidden flex flex-col group reveal project-item" data-category="creative">
-          <div class="relative h-48 overflow-hidden" style="background: linear-gradient(135deg, #9D174D, #6D28D9);">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-            <div class="absolute top-6 left-6 text-4xl">🏆</div>
-            <div class="absolute top-4 right-6 font-outfit text-5xl font-black text-white/20 select-none">06</div>
-            <div class="absolute bottom-4 left-6 flex items-center gap-2">
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/20 text-white backdrop-blur-sm">Kompetisi Nasional</span>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="font-outfit font-bold text-lg text-inherit group-hover:text-primary transition-colors">Arkavidia UXVIDIA — ITB</h3>
-                <span class="font-mono-code text-xs text-soft">Feb 2025</span>
-              </div>
-              <p class="text-sm leading-relaxed mb-4" style="color:var(--text-muted);">
-                Kompetisi Desain UI/UX tingkat nasional oleh HMIF Institut Teknologi Bandung (ITB). Berhasil lolos babak penyisihan dengan inovasi solusi user-centric.
-              </p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="tag tag-coral">UI/UX</span><span class="tag">Figma</span><span class="tag">HMIF ITB</span>
-              </div>
-              <span class="text-xs font-bold text-muted">Sertifikat Partisipasi HMIF ITB</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. HEMO-SCAN PKM-KC -->
-        <div class="bento-card rounded-3xl overflow-hidden flex flex-col group reveal project-item" data-category="creative">
-          <div class="relative h-48 overflow-hidden" style="background: linear-gradient(135deg, #1D4ED8, #6D28D9);">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-            <div class="absolute top-6 left-6 text-4xl">🧬</div>
-            <div class="absolute top-4 right-6 font-outfit text-5xl font-black text-white/20 select-none">07</div>
-            <div class="absolute bottom-4 left-6 flex items-center gap-2">
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/20 text-white backdrop-blur-sm">Riset PKM-KC</span>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="font-outfit font-bold text-lg text-inherit group-hover:text-primary transition-colors">HEMO-SCAN (PKM-KC)</h3>
-                <span class="font-mono-code text-xs text-soft">Nov 2025</span>
-              </div>
-              <p class="text-sm leading-relaxed mb-4" style="color:var(--text-muted);">
-                Riset prototipe medis deteksi golongan darah portabel menggunakan 11-channel multi-spectral sensing dan integrasi IoT/Machine Learning di UMY.
-              </p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="tag">IoT</span><span class="tag tag-teal">ML</span><span class="tag">Firebase</span>
-              </div>
-              <span class="text-xs font-bold text-muted">Program Kreativitas Mahasiswa UMY</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. MAP UMYFIRST — Roblox -->
-        <div class="bento-card rounded-3xl overflow-hidden flex flex-col group reveal project-item" data-category="creative">
-          <div class="relative h-48 overflow-hidden" style="background: linear-gradient(135deg, #B45309, #7C3AED);">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-            <div class="absolute top-6 left-6 text-4xl">🗺️</div>
-            <div class="absolute top-4 right-6 font-outfit text-5xl font-black text-white/20 select-none">08</div>
-            <div class="absolute bottom-4 left-6 flex items-center gap-2">
-              <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/20 text-white backdrop-blur-sm">Metaverse & Lua</span>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="font-outfit font-bold text-lg text-inherit group-hover:text-primary transition-colors">MAP UMYFIRST (Roblox)</h3>
-                <span class="font-mono-code text-xs text-soft">Jul 2025</span>
-              </div>
-              <p class="text-sm leading-relaxed mb-4" style="color:var(--text-muted);">
-                Kreator peta virtual kampus UMY VERSE di Roblox, ditugaskan resmi oleh Admisi UMY untuk inovasi promosi kampus interaktif generasi muda.
-              </p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="tag tag-amber">Lua</span><span class="tag">Roblox Studio</span><span class="tag tag-teal">UMY Admisi</span>
-              </div>
-              <span class="text-xs font-bold text-muted">Dipublikasikan Resmi di Platform Roblox</span>
-            </div>
-          </div>
-        </div>
-
+        <span class="text-xl">⭐</span>
       </div>
 
     </div>
+
   </section>
 
   <!-- ═══════════════════════════════════════ -->
-  <!--             SKILLS & TECH DOCK          -->
-  <!--      (Inspired by reference app tiles)  -->
+  <!--       SKILLS ROW (1:1 REFERENCE)        -->
   <!-- ═══════════════════════════════════════ -->
-  <section id="skills" class="py-24 relative" style="background:var(--bg2);">
-    <div class="orb w-72 h-72 -left-20 bottom-10 animate-float-reverse" style="background:var(--secondary); opacity:0.1;"></div>
+  <section id="skills" class="py-16 px-4 sm:px-6 max-w-7xl mx-auto relative">
+    
+    <!-- Title SKILLS in bold brush font with floating doodles -->
+    <div class="mb-8 flex items-center gap-3">
+      <h2 class="font-display font-black text-3xl sm:text-4xl uppercase tracking-wider" style="color:var(--text-main);">
+        SKILLS
+      </h2>
+      <div class="text-2xl text-brand-purple select-none animate-bounce">⚡</div>
+    </div>
 
-    <div class="max-w-7xl mx-auto px-6">
+    <!-- App Icon Tile Row (Matching Reference: H, Ae, An, Ps, Blender, Pr) -->
+    <div class="container-reference-dark p-6 sm:p-8 relative">
       
-      <!-- Section Title -->
-      <div class="text-center mb-14 reveal">
-        <div class="section-label mx-auto mb-2">
-          <span>ARSENAL KEAHLIAN</span>
-        </div>
-        <h2 class="font-outfit font-black tracking-tight" style="font-size:clamp(2.2rem,5vw,3.5rem); color:var(--text);">
-          SKILLS & <span class="text-gradient">TEKNOLOGI</span>
-        </h2>
-        <p class="text-sm sm:text-base mt-2 max-w-lg mx-auto" style="color:var(--text-muted);">
-          Tools dan instrumen yang saya pakai sehari-hari untuk merancang dan membangun software.
-        </p>
+      <!-- Doodled purple ribbon on the right from reference -->
+      <div class="absolute -top-4 right-10 text-brand-purple font-hand text-4xl select-none hidden sm:block">
+        〰️
       </div>
 
-      <!-- App Icon Dock (Like reference image: H, Ae, An, Ps, Blender, Pr) -->
-      <div class="card rounded-3xl p-6 sm:p-8 mb-12 reveal border shadow-md">
-        <p class="font-mono-code text-xs font-bold text-center uppercase tracking-wider mb-6" style="color:var(--text-soft);">
-          // TEKNOLOGI INTI & ECOSYSTEM
-        </p>
-        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-          
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#E34F26; background:rgba(227,79,38,0.08);">
-              <span>&lt;/&gt;</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">HTML5</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#F7DF1E; background:rgba(247,223,30,0.1);">
-              <span>JS</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">JavaScript</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#68A063; background:rgba(104,160,99,0.1);">
-              <span>Node</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">Node.js</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#239120; background:rgba(35,145,32,0.1);">
-              <span>C#</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">C# (.NET)</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#003B57; background:rgba(0,59,87,0.1);">
-              <span>SQL</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">SQLite / DB</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#38BDF8; background:rgba(56,189,248,0.1);">
-              <span>CSS</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">Tailwind</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#FF2D20; background:rgba(255,45,32,0.1);">
-              <span>PHP</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">Laravel</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#000080; background:rgba(0,0,128,0.1);">
-              <span>Lua</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">Roblox Lua</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#F24E1E; background:rgba(242,78,30,0.1);">
-              <span>Fig</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">Figma</span>
-          </div>
-
-          <div class="flex flex-col items-center gap-2">
-            <div class="app-icon" style="color:#F05032; background:rgba(240,80,50,0.1);">
-              <span>Git</span>
-            </div>
-            <span class="font-jakarta text-xs font-bold" style="color:var(--text);">GitHub</span>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Skill Categories Cards (Subtle percentages & clean badges as requested) -->
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <!-- Frontend Card -->
-        <div class="card rounded-3xl p-7 card-hover reveal flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-5">
-              <div class="flex items-center gap-3">
-                <span class="text-2xl">🖥️</span>
-                <h3 class="font-outfit font-bold text-lg" style="color:var(--text);">Frontend & UI</h3>
-              </div>
-              <span class="tag">Expertise</span>
-            </div>
-            <p class="text-xs mb-5" style="color:var(--text-muted);">Membangun antarmuka interaktif responsif, bersih, dan cepat.</p>
-            
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">HTML5 & CSS3</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--primary);">Advanced</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:90%;"></div></div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">JavaScript (Vanilla / ES6+)</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--primary);">Advanced</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:85%;"></div></div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">Tailwind CSS</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--primary);">Advanced</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:85%;"></div></div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">React / Modern Web</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--primary);">Intermediate</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:70%;"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Backend & DB Card -->
-        <div class="card rounded-3xl p-7 card-hover reveal flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-5">
-              <div class="flex items-center gap-3">
-                <span class="text-2xl">⚙️</span>
-                <h3 class="font-outfit font-bold text-lg" style="color:var(--text);">Backend & Data</h3>
-              </div>
-              <span class="tag tag-teal">Reliable</span>
-            </div>
-            <p class="text-xs mb-5" style="color:var(--text-muted);">Merancang arsitektur server, REST API, dan manajemen basis data.</p>
-            
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">Node.js / Express</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--secondary);">Proficient</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:82%; background:var(--secondary);"></div></div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">SQLite & SQL Server</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--secondary);">Proficient</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:84%; background:var(--secondary);"></div></div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">RESTful API Architecture</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--secondary);">Proficient</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:80%; background:var(--secondary);"></div></div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">PHP & Laravel Framework</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--secondary);">Intermediate</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:72%; background:var(--secondary);"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Desktop & Creative Tools Card -->
-        <div class="card rounded-3xl p-7 card-hover reveal flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-5">
-              <div class="flex items-center gap-3">
-                <span class="text-2xl">🛠️</span>
-                <h3 class="font-outfit font-bold text-lg" style="color:var(--text);">Desktop & Creative</h3>
-              </div>
-              <span class="tag tag-amber">Versatile</span>
-            </div>
-            <p class="text-xs mb-5" style="color:var(--text-muted);">Pengembangan aplikasi desktop C#, scripting game, dan kolaborasi tim.</p>
-            
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">C# WinForms (.NET)</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--accent2);">Proficient</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:80%; background:var(--accent2);"></div></div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">Git Version Control & GitHub</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--accent2);">Proficient</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:85%; background:var(--accent2);"></div></div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">Lua (Roblox Studio Engine)</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--accent2);">Intermediate</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:70%; background:var(--accent2);"></div></div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-xs font-bold mb-1.5">
-                  <span style="color:var(--text);">Figma & UI Prototyping</span>
-                  <span class="font-mono-code text-[11px]" style="color:var(--accent2);">Design Ready</span>
-                </div>
-                <div class="skill-track"><div class="skill-fill" style="width:65%; background:var(--accent2);"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!--               ABOUT ME                  -->
-  <!--   (Inspired by reference ABOUT ME card) -->
-  <!-- ═══════════════════════════════════════ -->
-  <section id="about" class="py-24 relative">
-    <div class="orb w-80 h-80 -right-20 top-20 animate-float-slow" style="background:var(--primary); opacity:0.08;"></div>
-
-    <div class="max-w-7xl mx-auto px-6">
-
-      <!-- Dynamic Split Card for About Me (Like reference lower card!) -->
-      <div class="card rounded-[36px] p-6 sm:p-12 mb-16 relative overflow-hidden border-2 reveal"
-           style="background: linear-gradient(135deg, var(--card), var(--bg2)); border-color: var(--border-strong);">
-
-        <div class="grid lg:grid-cols-12 gap-10 items-center">
-          
-          <!-- Left side: Illustration / Photo sticker frame with Lime/Neon accents (from reference!) -->
-          <div class="lg:col-span-5 relative flex justify-center">
-            <div class="relative w-full max-w-[340px]">
-              
-              <!-- Neon sticker text block on corner -->
-              <div class="absolute -top-4 -left-4 z-20 font-outfit font-black text-xs px-3.5 py-1.5 rounded-lg border-2 shadow-md uppercase tracking-wider"
-                   style="background:#A3E635; color:#121124; border-color:#121124; transform:rotate(-4deg);">
-                FOCUS • DISCIPLINE
-              </div>
-
-              <div class="rounded-3xl p-3 border-2 overflow-hidden shadow-xl"
-                   style="background:linear-gradient(135deg, #FFDE59 0%, #A3E635 100%); border-color:#121124;">
-                <div class="rounded-2xl overflow-hidden bg-slate-900 h-80 relative">
-                  <img src="hafiz.jpg" alt="Hafiz Kurniawan"
-                       class="w-full h-full object-cover object-center"
-                       style="object-position: center 20%; filter: contrast(1.05);" />
-                  <!-- Bottom quote banner -->
-                  <div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/90 to-transparent text-white font-sans text-xs">
-                    <p class="font-bold">Hafiz Kurniawan</p>
-                    <p class="text-[11px] text-gray-300">Software Developer & Student</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="absolute -bottom-3 -right-3 z-20 font-hand text-xl font-bold px-4 py-1 rounded-full border-2 shadow-md"
-                   style="background:#FF597B; color:#fff; border-color:#121124; transform:rotate(3deg);">
-                100% Passion Driven ✨
-              </div>
-            </div>
-          </div>
-
-          <!-- Right side: Bio & Story -->
-          <div class="lg:col-span-7 flex flex-col items-start">
-            <div class="section-label mb-2">
-              <span>PROFIL PENGEMBANG</span>
-            </div>
-            
-            <h2 class="font-outfit font-black tracking-tight mb-4 flex items-center gap-3"
-                style="font-size:clamp(2rem,4.5vw,3rem); color:var(--text);">
-              ABOUT ME
-              <span class="font-hand text-3xl" style="color:var(--primary); font-weight:normal;">~</span>
-            </h2>
-
-            <p class="leading-relaxed mb-4 text-base" style="color:var(--text-muted);">
-              Halo! Saya <strong style="color:var(--text);">Hafiz Kurniawan</strong>, mahasiswa semester 4 S1 Teknologi Informasi di Universitas Muhammadiyah Yogyakarta (NIM: 20240140024). Saya mendedikasikan waktu saya untuk mempelajari ekosistem software engineering modern, dari web interaktif hingga desktop software yang andal.
-            </p>
-
-            <p class="leading-relaxed mb-6 text-base" style="color:var(--text-muted);">
-              Bagi saya, pemrograman bukan hanya tentang menulis kode yang bekerja — tetapi tentang merancang pengalaman yang menyenangkan, menyelesaikan masalah riil secara efisien, dan menghadirkan estetika yang memikat.
-            </p>
-
-            <!-- Stats Mini Counter -->
-            <div class="grid grid-cols-3 gap-3 w-full mb-8">
-              <div class="card p-3 sm:p-4 rounded-2xl text-center">
-                <p class="font-outfit text-2xl sm:text-3xl font-black text-gradient" data-target="12">0+</p>
-                <p class="font-jakarta text-[11px] uppercase tracking-wider font-semibold" style="color:var(--text-soft);">Proyek Selesai</p>
-              </div>
-              <div class="card p-3 sm:p-4 rounded-2xl text-center">
-                <p class="font-outfit text-2xl sm:text-3xl font-black text-gradient" data-target="2">0+</p>
-                <p class="font-jakarta text-[11px] uppercase tracking-wider font-semibold" style="color:var(--text-soft);">Tahun Coding</p>
-              </div>
-              <div class="card p-3 sm:p-4 rounded-2xl text-center">
-                <p class="font-outfit text-2xl sm:text-3xl font-black text-gradient" data-target="8">0+</p>
-                <p class="font-jakarta text-[11px] uppercase tracking-wider font-semibold" style="color:var(--text-soft);">Tech Stack</p>
-              </div>
-            </div>
-
-            <!-- CV Download Actions -->
-            <div class="flex flex-wrap items-center gap-3">
-              <a href="CV_Hafiz_Kurniawan.docx" download class="btn-primary text-sm py-2.5 px-6">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Unduh CV (.docx)</span>
-              </a>
-              <a href="CV_Hafiz_Kurniawan.pdf" target="_blank" download class="btn-outline text-sm py-2.5 px-6">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                <span>Unduh CV (.pdf)</span>
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- Experience & Academic Timeline -->
-      <div class="reveal">
-        <div class="flex items-center gap-2 mb-6">
-          <span class="text-xl">📍</span>
-          <h3 class="font-outfit font-black text-2xl tracking-tight" style="color:var(--text);">
-            Pendidikan & Pengalaman Organisasi
-          </h3>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-          
-          <!-- Kuliah -->
-          <div class="card rounded-3xl p-6 card-hover flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="tag">Pendidikan</span>
-                <span class="font-mono-code text-xs text-soft">2024 – Sekarang</span>
-              </div>
-              <h4 class="font-outfit font-bold text-base mb-1" style="color:var(--text);">S1 Teknologi Informasi</h4>
-              <p class="text-xs font-semibold mb-3" style="color:var(--primary);">Universitas Muhammadiyah Yogyakarta</p>
-              <p class="text-xs leading-relaxed" style="color:var(--text-muted);">
-                Fakultas Teknik. Mempelajari rekayasa perangkat lunak, algoritma, basis data, jaringan, dan pengembangan aplikasi digital.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t font-mono-code text-[11px]" style="border-color:var(--border-soft); color:var(--text-soft);">
-              NIM: 20240140024
-            </div>
-          </div>
-
-          <!-- Kepanitiaan -->
-          <div class="card rounded-3xl p-6 card-hover flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="tag tag-teal">Kepanitiaan</span>
-                <span class="font-mono-code text-xs text-soft">2024 – 2026</span>
-              </div>
-              <h4 class="font-outfit font-bold text-base mb-1" style="color:var(--text);">Kegiatan & Organisasi</h4>
-              <p class="text-xs font-semibold mb-3" style="color:var(--secondary);">Prodi TI UMY</p>
-              <ul class="text-xs leading-relaxed space-y-1.5" style="color:var(--text-muted);">
-                <li>⭐ <strong style="color:var(--text);">IT Specta 2026</strong>: Koordinator Divisi Multimedia</li>
-                <li>🎯 <strong style="color:var(--text);">IT Phoria Fest 2024</strong>: Anggota Panitia</li>
-                <li>🎯 <strong style="color:var(--text);">IT Specta 2025</strong>: Anggota Panitia</li>
-              </ul>
-            </div>
-            <div class="mt-4 pt-3 border-t font-mono-code text-[11px]" style="border-color:var(--border-soft); color:var(--text-soft);">
-              Divisi Multimedia & Publikasi
-            </div>
-          </div>
-
-          <!-- Kompetisi -->
-          <div class="card rounded-3xl p-6 card-hover flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="tag tag-coral">Prestasi</span>
-                <span class="font-mono-code text-xs text-soft">2025 – 2026</span>
-              </div>
-              <h4 class="font-outfit font-bold text-base mb-1" style="color:var(--text);">Kompetisi & Program</h4>
-              <p class="text-xs font-semibold mb-3" style="color:var(--accent);">Nasional</p>
-              <ul class="text-xs leading-relaxed space-y-1.5" style="color:var(--text-muted);">
-                <li>🏆 <strong style="color:var(--text);">Arkavidia UXVIDIA ITB</strong>: Penyisihan</li>
-                <li>🏆 <strong style="color:var(--text);">Find IT UGM</strong>: Babak Penyisihan</li>
-                <li>🧬 <strong style="color:var(--text);">PKM-KC UMY</strong>: Proyek HEMO-SCAN</li>
-                <li>🗺️ <strong style="color:var(--text);">UMY VERSE</strong>: Map Creator Roblox Admisi</li>
-              </ul>
-            </div>
-            <div class="mt-4 pt-3 border-t font-mono-code text-[11px]" style="border-color:var(--border-soft); color:var(--text-soft);">
-              Level Kampus & Nasional
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!--             CONTACT SECTION             -->
-  <!--   (Inspired by reference DOPE footer!)  -->
-  <!-- ═══════════════════════════════════════ -->
-  <section id="contact" class="py-24 relative" style="background:var(--bg2);">
-    <div class="orb w-96 h-96 left-1/2 -translate-x-1/2 top-0 animate-pulse-glow" style="background:var(--primary); opacity:0.1;"></div>
-
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="reveal">
+      <div class="flex flex-wrap items-center justify-around gap-6">
         
-        <div class="section-label mx-auto mb-3">
-          <span>GET IN TOUCH</span>
+        <!-- App Tile 1: HTML5 (ToonBoom H style) -->
+        <div class="flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-16 h-16 rounded-2xl bg-slate-900 border-2 border-cyan-400 flex items-center justify-center font-display font-black text-2xl text-cyan-400 shadow-lg group-hover:scale-110 group-hover:border-brand-lime transition-all">
+            H
+          </div>
+          <span class="text-xs font-display font-bold text-slate-300">HTML5</span>
         </div>
 
-        <!-- Headline with doodle circle -->
-        <h2 class="font-outfit font-black tracking-tight leading-none mb-6"
-            style="font-size:clamp(2.5rem,7.5vw,5.2rem); color:var(--text);">
-          LET'S MAKE SOMETHING
-          <span class="doodle-circle">
-            <span class="text-gradient-shimmer">AWESOME!</span>
-            <svg viewBox="0 0 200 60" fill="none">
-              <path d="M10 30 C 20 8, 180 6, 192 28 C 200 48, 25 58, 8 32 C 4 22, 50 14, 110 12"
-                    stroke="#FFDE59" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- App Tile 2: JavaScript (Ae style) -->
+        <div class="flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-16 h-16 rounded-2xl bg-slate-900 border-2 border-yellow-400 flex items-center justify-center font-display font-black text-2xl text-yellow-400 shadow-lg group-hover:scale-110 group-hover:border-brand-lime transition-all">
+            JS
+          </div>
+          <span class="text-xs font-display font-bold text-slate-300">JavaScript</span>
+        </div>
+
+        <!-- App Tile 3: Node.js (An style) -->
+        <div class="flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-16 h-16 rounded-2xl bg-slate-900 border-2 border-emerald-400 flex items-center justify-center font-display font-black text-xl text-emerald-400 shadow-lg group-hover:scale-110 group-hover:border-brand-lime transition-all">
+            Node
+          </div>
+          <span class="text-xs font-display font-bold text-slate-300">Node.js</span>
+        </div>
+
+        <!-- App Tile 4: C# .NET (Ps style) -->
+        <div class="flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-16 h-16 rounded-2xl bg-slate-900 border-2 border-purple-400 flex items-center justify-center font-display font-black text-2xl text-purple-400 shadow-lg group-hover:scale-110 group-hover:border-brand-lime transition-all">
+            C#
+          </div>
+          <span class="text-xs font-display font-bold text-slate-300">WinForms</span>
+        </div>
+
+        <!-- App Tile 5: SQLite / DB (Blender style) -->
+        <div class="flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-16 h-16 rounded-2xl bg-slate-900 border-2 border-amber-400 flex items-center justify-center font-display font-black text-xl text-amber-400 shadow-lg group-hover:scale-110 group-hover:border-brand-lime transition-all">
+            SQL
+          </div>
+          <span class="text-xs font-display font-bold text-slate-300">Database</span>
+        </div>
+
+        <!-- App Tile 6: Tailwind CSS (Pr style) -->
+        <div class="flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-16 h-16 rounded-2xl bg-slate-900 border-2 border-sky-400 flex items-center justify-center font-display font-black text-xl text-sky-400 shadow-lg group-hover:scale-110 group-hover:border-brand-lime transition-all">
+            CSS
+          </div>
+          <span class="text-xs font-display font-bold text-slate-300">Tailwind</span>
+        </div>
+
+        <!-- App Tile 7: Roblox Lua Engine -->
+        <div class="flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-16 h-16 rounded-2xl bg-slate-900 border-2 border-blue-400 flex items-center justify-center font-display font-black text-xl text-blue-400 shadow-lg group-hover:scale-110 group-hover:border-brand-lime transition-all">
+            Lua
+          </div>
+          <span class="text-xs font-display font-bold text-slate-300">Roblox</span>
+        </div>
+
+        <!-- App Tile 8: Figma Design -->
+        <div class="flex flex-col items-center gap-2 group cursor-pointer">
+          <div class="w-16 h-16 rounded-2xl bg-slate-900 border-2 border-pink-400 flex items-center justify-center font-display font-black text-xl text-pink-400 shadow-lg group-hover:scale-110 group-hover:border-brand-lime transition-all">
+            Fig
+          </div>
+          <span class="text-xs font-display font-bold text-slate-300">Figma</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--       ABOUT ME (1:1 REFERENCE)         -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="about" class="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
+    
+    <!-- Split Card Container from Reference -->
+    <div class="container-reference-dark p-8 sm:p-12 relative overflow-hidden">
+      
+      <!-- Big Purple Doodle Wiggle on the right from reference: ~~~ -->
+      <div class="absolute top-10 right-10 text-brand-purple text-5xl font-hand select-none hidden lg:block">
+        ~~~~
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Green Art Character Card with FOCUS DISCIPLINE CONSISTENCY Tape (Exact from Reference!) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-[340px]">
+            
+            <!-- Doodle crown on top of the lime box from reference -->
+            <div class="absolute -top-6 right-6 text-2xl select-none z-20">
+              👑
+            </div>
+
+            <!-- The Lime-Yellow Portrait Box -->
+            <div class="rounded-3xl p-3 bg-brand-lime border-3 border-slate-950 shadow-2xl relative overflow-hidden">
+              
+              <!-- Black Tape Angled Sticker (Exact from Reference!) -->
+              <div class="absolute top-6 left-4 z-20 bg-slate-950 text-brand-lime font-display font-black text-[11px] py-1 px-3 tracking-wider transform -rotate-6 shadow-md">
+                FOCUS<br/>DISCIPLINE<br/>CONSISTENCY
+              </div>
+
+              <!-- Inner Photo Area -->
+              <div class="h-72 rounded-2xl overflow-hidden bg-slate-900 relative">
+                <img src="hafiz.jpg" alt="Hafiz Kurniawan" 
+                     class="w-full h-full object-cover object-top filter grayscale contrast-125 hover:grayscale-0 transition-all duration-500" 
+                     style="object-position: center 18%;" />
+                <div class="absolute inset-0 bg-brand-lime/10 mix-blend-screen"></div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: ABOUT ME title + Bio text + Know More About Me ➔ (From Reference!) -->
+        <div class="lg:col-span-7 flex flex-col items-start">
+          
+          <h2 class="font-display font-black text-3xl sm:text-4xl uppercase tracking-wider text-white mb-4">
+            ABOUT ME
+          </h2>
+
+          <p class="text-sm sm:text-base leading-relaxed text-slate-300 mb-4 font-normal">
+            I'm Hafiz, an IT Developer & Software Engineering student at Universitas Muhammadiyah Yogyakarta who loves turning complex logic into playful, impactful, and reliable digital applications.
+          </p>
+
+          <p class="text-sm sm:text-base leading-relaxed text-slate-300 mb-6 font-normal">
+            I enjoy telling stories through smooth user interfaces, crafting fast backend systems, and solving real-world challenges through technology that leaves a lasting impression.
+          </p>
+
+          <!-- Know More About Me ➔ (Lime green link from reference!) -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="CV_Hafiz_Kurniawan.docx" download class="inline-flex items-center gap-2 font-display font-extrabold text-brand-lime text-base hover:translate-x-1 transition-transform" style="text-decoration:none;">
+              <span>Know More About Me</span>
+              <div class="w-6 h-6 rounded-full bg-brand-lime text-slate-950 flex items-center justify-center text-xs">
+                ➔
+              </div>
+            </a>
+            
+            <a href="CV_Hafiz_Kurniawan.pdf" target="_blank" download class="px-4 py-1.5 rounded-full border border-white/20 text-xs font-display font-bold text-white hover:border-brand-lime transition-colors" style="text-decoration:none;">
+              Download CV (.pdf)
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--    FOOTER / CONTACT (1:1 REFERENCE)     -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer id="contact" class="py-16 px-4 sm:px-6 max-w-7xl mx-auto border-t border-slate-800/60 mt-10">
+    
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-10">
+      
+      <!-- Big Headline: LET'S MAKE SOMETHING DOPE! (From Reference!) -->
+      <div class="flex flex-col">
+        <h2 class="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight leading-tight text-black dark:text-white">
+          LET'S MAKE<br/>
+          SOMETHING 
+          <span class="doodle-circle-wrap">
+            <span class="text-brand-lime">DOPE!</span>
+            <svg class="doodle-circle-svg" viewBox="0 0 160 55" fill="none">
+              <path d="M12 28 C 16 10, 142 8, 150 26 C 156 42, 22 52, 10 32 C 6 22, 55 14, 110 12" stroke="#6C5CE7" stroke-width="3.5" stroke-linecap="round"/>
             </svg>
           </span>
         </h2>
+      </div>
 
-        <p class="max-w-xl mx-auto mb-10 leading-relaxed text-base" style="color:var(--text-muted);">
-          Terbuka untuk peluang magang, proyek kolaborasi freelance, riset kreatif, atau sekadar berbincang tentang teknologi terkini.
-        </p>
-
-        <!-- Main Contact Card -->
-        <div class="card rounded-3xl p-8 sm:p-12 mb-12 relative overflow-hidden border-2 shadow-xl"
-             style="border-color:var(--border-strong);">
-          
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="text-left">
-              <span class="font-mono-code text-xs uppercase tracking-wider font-bold" style="color:var(--text-soft);">Direct Email:</span>
-              <p class="font-outfit font-black text-xl sm:text-2xl mt-0.5" style="color:var(--text);">hafizzkurniawan19@gmail.com</p>
-              <p class="text-xs mt-1" style="color:var(--text-muted);">📍 Yogyakarta, Indonesia • Respons cepat via email</p>
-            </div>
-
-            <div class="flex items-center gap-3">
-              <a href="mailto:hafizzkurniawan19@gmail.com" class="btn-primary text-sm py-3 px-6">
-                <span>Kirim Email</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </a>
-              <button onclick="copyEmail()" class="btn-outline text-sm py-3 px-4" title="Salin Alamat Email" id="copy-btn">
-                <span>📋 Salin</span>
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Social Pills -->
-        <div class="flex justify-center gap-3 mb-12 flex-wrap">
-          <a href="https://github.com/wpiskaa" target="_blank" rel="noopener noreferrer" class="social-pill">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span>GitHub / wpiskaa</span>
-          </a>
-          <a href="https://www.linkedin.com/in/hafiz-kurniawan-604791370/" target="_blank" rel="noopener noreferrer" class="social-pill">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            <span>LinkedIn</span>
-          </a>
-          <a href="https://www.instagram.com/hafizzkrnwn/" target="_blank" rel="noopener noreferrer" class="social-pill">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162S8.597 18.163 12 18.163s6.162-2.759 6.162-6.162S15.403 5.838 12 5.838zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            <span>Instagram</span>
+      <!-- Right: Contact info, Location, Social Icons (Exact from Reference!) -->
+      <div class="flex flex-col gap-4">
+        
+        <!-- Email with envelope -->
+        <div class="flex items-center gap-3">
+          <span class="text-lg">✉️</span>
+          <a href="mailto:hafizzkurniawan19@gmail.com" class="font-display font-bold text-sm sm:text-base hover:text-brand-lime transition-colors" style="color:inherit; text-decoration:none;">
+            hafizzkurniawan19@gmail.com
           </a>
         </div>
 
-        <!-- Footer Bottom Bar -->
-        <div class="pt-8 border-t flex flex-col md:flex-row items-center justify-between gap-4 text-xs" style="border-color:var(--border);">
-          <div class="flex items-center gap-2">
-            <span class="font-outfit font-black text-sm text-gradient">HAFIZ KURNIAWAN</span>
-            <span style="color:var(--text-soft);">• Designed & Developed with Passion</span>
-          </div>
-          <p style="color:var(--text-soft);">© 2026 Hafiz Kurniawan — Universitas Muhammadiyah Yogyakarta.</p>
-          <a href="#hero" class="hover:underline font-bold" style="color:var(--primary);">Kembali ke Atas ↑</a>
+        <!-- Location with pin -->
+        <div class="flex items-center gap-3 opacity-80">
+          <span class="text-lg">📍</span>
+          <span class="font-display text-sm">Yogyakarta, Indonesia</span>
+        </div>
+
+        <!-- Social Icons (Instagram, Dribbble/Web, YouTube, LinkedIn from Reference!) -->
+        <div class="flex items-center gap-3 pt-2">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/hafizzkrnwn/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-current flex items-center justify-center text-sm hover:bg-brand-lime hover:text-slate-950 transition-colors" style="text-decoration:none;" title="Instagram">
+            📸
+          </a>
+          <!-- GitHub / Web -->
+          <a href="https://github.com/wpiskaa" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-current flex items-center justify-center text-sm hover:bg-brand-lime hover:text-slate-950 transition-colors" style="text-decoration:none;" title="GitHub">
+            🐙
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/hafiz-kurniawan-604791370/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-current flex items-center justify-center text-sm hover:bg-brand-lime hover:text-slate-950 transition-colors" style="text-decoration:none;" title="LinkedIn">
+            💼
+          </a>
         </div>
 
       </div>
+
     </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!--               CV MODAL                  -->
-  <!-- ═══════════════════════════════════════ -->
-  <div id="cv-modal-backdrop" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="card rounded-3xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl border-2" style="border-color:var(--border-strong);">
-      <button onclick="closeCvModal()" class="absolute top-4 right-4 text-xl p-1 rounded-full hover:bg-slate-500/20" aria-label="Close">✕</button>
-      <div class="text-center mb-6">
-        <span class="text-3xl mb-2 inline-block">📄</span>
-        <h3 class="font-outfit font-black text-2xl" style="color:var(--text);">Unduh Curriculum Vitae</h3>
-        <p class="text-xs mt-1" style="color:var(--text-muted);">Pilih format file CV Hafiz Kurniawan yang Anda butuhkan:</p>
-      </div>
-      <div class="flex flex-col gap-3">
-        <a href="CV_Hafiz_Kurniawan.docx" download class="btn-primary justify-center text-sm py-3">
-          <span>Unduh Format Word (.docx)</span>
-        </a>
-        <a href="CV_Hafiz_Kurniawan.pdf" target="_blank" download class="btn-outline justify-center text-sm py-3">
-          <span>Buka / Unduh Format PDF (.pdf)</span>
-        </a>
-      </div>
+    <!-- Copyright Subtext -->
+    <div class="pt-10 mt-10 border-t border-slate-800/40 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs opacity-60 font-display">
+      <p>© 2026 Hafiz Kurniawan — Crafted with passion in Yogyakarta.</p>
+      <a href="#hero" class="hover:underline">Back to top ↑</a>
     </div>
-  </div>
+
+  </footer>
 
   <!-- ═══════════════════════════════════════ -->
   <!--              JAVASCRIPT                 -->
   <!-- ═══════════════════════════════════════ -->
   <script>
-    // ══════════════════════════════════════════════
-    // THEME SYSTEM — Light default, .dark toggle
-    // ══════════════════════════════════════════════
+    // Theme Toggle System
     (function () {
       const html = document.documentElement;
+      const toggleBtn = document.getElementById('theme-toggle');
+      const knob = document.getElementById('theme-knob');
 
-      // Default light mode
-      const saved = localStorage.getItem('hk-theme') || 'light';
-      if (saved === 'dark') html.classList.add('dark');
-
-      function updateToggleUI() {
-        const isDark = html.classList.contains('dark');
-        const iconEl       = document.getElementById('theme-icon');
-        const iconMobileEl = document.getElementById('theme-icon-mobile');
-        if (iconEl)       iconEl.textContent       = isDark ? '🌙' : '☀️';
-        if (iconMobileEl) iconMobileEl.textContent  = isDark ? '🌙' : '☀️';
+      // Default mode light
+      const savedTheme = localStorage.getItem('hk-portfolio-theme') || 'light';
+      if (savedTheme === 'dark') {
+        html.classList.add('dark');
+        if (knob) knob.textContent = '🌙';
+      } else {
+        html.classList.remove('dark');
+        if (knob) knob.textContent = '☀️';
       }
 
-      function toggleTheme() {
-        html.classList.toggle('dark');
-        const isDark = html.classList.contains('dark');
-        localStorage.setItem('hk-theme', isDark ? 'dark' : 'light');
-        updateToggleUI();
-        updateNavbar();
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          html.classList.toggle('dark');
+          const isDark = html.classList.contains('dark');
+          localStorage.setItem('hk-portfolio-theme', isDark ? 'dark' : 'light');
+          if (knob) knob.textContent = isDark ? '🌙' : '☀️';
+        });
       }
-
-      const btn        = document.getElementById('theme-toggle-btn');
-      const btnMobile  = document.getElementById('theme-toggle-btn-mobile');
-      if (btn)       btn.addEventListener('click', toggleTheme);
-      if (btnMobile) btnMobile.addEventListener('click', toggleTheme);
-
-      updateToggleUI();
     })();
 
-    // ══════════════════════════════════════════════
-    // CUSTOM CURSOR
-    // ══════════════════════════════════════════════
+    // Custom Cursor Follower
     (function () {
-      const cursor     = document.getElementById('cursor');
-      const cursorRing = document.getElementById('cursor-ring');
-      if (!cursor || !cursorRing) return;
+      const cursor = document.getElementById('cursor');
+      const ring = document.getElementById('cursor-ring');
+      if (!cursor || !ring) return;
 
       let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
 
       document.addEventListener('mousemove', e => {
         mouseX = e.clientX; mouseY = e.clientY;
         cursor.style.left = (mouseX - 5) + 'px';
-        cursor.style.top  = (mouseY - 5) + 'px';
+        cursor.style.top = (mouseY - 5) + 'px';
       });
 
       (function animateRing() {
-        ringX += (mouseX - ringX) * 0.14;
-        ringY += (mouseY - ringY) * 0.14;
-        cursorRing.style.left = (ringX - 17) + 'px';
-        cursorRing.style.top  = (ringY - 17) + 'px';
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        ring.style.left = (ringX - 18) + 'px';
+        ring.style.top = (ringY - 18) + 'px';
         requestAnimationFrame(animateRing);
       })();
 
-      document.querySelectorAll('a, button, .bento-card, .card-hover, .app-icon').forEach(el => {
+      document.querySelectorAll('a, button, .btn-lime, .btn-pill-dark, .container-reference-dark').forEach(el => {
         el.addEventListener('mouseenter', () => {
           cursor.style.transform = 'scale(2.2)';
-          cursorRing.style.width  = '52px'; cursorRing.style.height = '52px';
+          ring.style.width = '52px'; ring.style.height = '52px';
         });
         el.addEventListener('mouseleave', () => {
           cursor.style.transform = 'scale(1)';
-          cursorRing.style.width  = '34px'; cursorRing.style.height = '34px';
+          ring.style.width = '36px'; ring.style.height = '36px';
         });
       });
     })();
 
-    // ══════════════════════════════════════════════
-    // NAVBAR SCROLL EFFECT
-    // ══════════════════════════════════════════════
-    const navbar = document.getElementById('navbar');
-
-    function updateNavbar() {
-      const isDark = document.documentElement.classList.contains('dark');
-      if (window.scrollY > 40) {
-        navbar.style.background = isDark
-          ? 'rgba(13,12,24,0.92)'
-          : 'rgba(248,249,254,0.92)';
-        navbar.style.backdropFilter = 'blur(20px)';
-        navbar.style.webkitBackdropFilter = 'blur(20px)';
-        navbar.style.borderBottom = `1px solid ${isDark ? 'rgba(130,120,255,0.18)' : 'rgba(99,85,255,0.12)'}`;
-        navbar.style.boxShadow = isDark
-          ? '0 4px 20px rgba(0,0,0,0.5)'
-          : '0 4px 20px rgba(99,85,255,0.08)';
-      } else {
-        navbar.style.background = '';
-        navbar.style.backdropFilter = '';
-        navbar.style.webkitBackdropFilter = '';
-        navbar.style.borderBottom = '';
-        navbar.style.boxShadow = '';
-      }
-    }
-
-    window.addEventListener('scroll', updateNavbar, { passive: true });
-
-    // ══════════════════════════════════════════════
-    // MOBILE MENU
-    // ══════════════════════════════════════════════
-    const menuBtn    = document.getElementById('menu-btn');
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    const bar1 = document.getElementById('bar1');
-    const bar2 = document.getElementById('bar2');
-    const bar3 = document.getElementById('bar3');
-    let menuOpen = false;
 
-    function closeMenu() {
-      menuOpen = false;
-      mobileMenu.classList.replace('open', 'closed');
-      bar1.style.transform = ''; bar2.style.opacity = '1'; bar3.style.transform = '';
-    }
-
-    if (menuBtn) {
-      menuBtn.addEventListener('click', () => {
-        menuOpen = !menuOpen;
-        if (menuOpen) {
-          mobileMenu.classList.replace('closed', 'open');
-          bar1.style.transform = 'translateY(8px) rotate(45deg)';
-          bar2.style.opacity   = '0';
-          bar3.style.transform = 'translateY(-8px) rotate(-45deg)';
-        } else { closeMenu(); }
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
       });
     }
 
-    // ══════════════════════════════════════════════
-    // FILTER PROJECTS
-    // ══════════════════════════════════════════════
-    function filterProjects(category, btnEl) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btnEl.classList.add('active');
-
-      const items = document.querySelectorAll('.project-item');
-      items.forEach(item => {
-        const itemCat = item.getAttribute('data-category');
-        if (category === 'all' || itemCat === category) {
-          item.style.display = 'flex';
-          gsap.fromTo(item, { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.4 });
-        } else {
-          item.style.display = 'none';
-        }
-      });
+    function closeMobileMenu() {
+      if (mobileMenu) mobileMenu.classList.add('hidden');
     }
-
-    // ══════════════════════════════════════════════
-    // COPY EMAIL ACTION
-    // ══════════════════════════════════════════════
-    function copyEmail() {
-      navigator.clipboard.writeText('hafizzkurniawan19@gmail.com').then(() => {
-        const btn = document.getElementById('copy-btn');
-        const orig = btn.innerHTML;
-        btn.innerHTML = '<span>✅ Tersalin!</span>';
-        setTimeout(() => { btn.innerHTML = orig; }, 2000);
-      });
-    }
-
-    // ══════════════════════════════════════════════
-    // CV MODAL
-    // ══════════════════════════════════════════════
-    function openCvModal(e) {
-      if (e) e.preventDefault();
-      document.getElementById('cv-modal-backdrop').classList.remove('hidden');
-    }
-    function closeCvModal() {
-      document.getElementById('cv-modal-backdrop').classList.add('hidden');
-    }
-    document.getElementById('cv-modal-backdrop')?.addEventListener('click', (e) => {
-      if (e.target.id === 'cv-modal-backdrop') closeCvModal();
-    });
-
-    // ══════════════════════════════════════════════
-    // GSAP ANIMATIONS
-    // ══════════════════════════════════════════════
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Hero entrance
-    gsap.timeline({ delay: 0.1 })
-      .from('#hero-badge',      { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out' })
-      .from('#hero-intro',      { y: 20, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.3')
-      .from('#hero-h1',         { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.3')
-      .from('#hero-roles',      { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-      .from('#hero-sub',        { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-      .from('#hero-cta',        { y: 20, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.3')
-      .from('#hero-tags',       { y: 15, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.3')
-      .from('#hero-card-frame', { scale: 0.92, opacity: 0, duration: 0.9, ease: 'back.out(1.4)' }, '-=0.7');
-
-    // Scroll reveal
-    gsap.utils.toArray('.reveal').forEach((el, i) => {
-      gsap.fromTo(el,
-        { y: 40, opacity: 0 },
-        {
-          y: 0, opacity: 1,
-          duration: 0.75,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 88%',
-            toggleActions: 'play none none none',
-          }
-        }
-      );
-    });
-
-    // Number counters
-    document.querySelectorAll('[data-target]').forEach(el => {
-      const target = +el.dataset.target;
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top 90%',
-        onEnter: () => {
-          const start = performance.now();
-          const dur   = 1600;
-          (function tick(now) {
-            const p = Math.min((now - start) / dur, 1);
-            const e = 1 - Math.pow(1 - p, 3);
-            el.textContent = Math.round(e * target) + '+';
-            if (p < 1) requestAnimationFrame(tick);
-          })(start);
-        }
-      });
-    });
-
-    // Subtle parallax on background orbs
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      document.querySelectorAll('.orb').forEach((orb, i) => {
-        const speed = (i % 2 === 0 ? 0.03 : -0.02) + i * 0.008;
-        orb.style.transform = `translateY(${y * speed}px)`;
-      });
-    }, { passive: true });
   </script>
+
 </body>
 </html>
