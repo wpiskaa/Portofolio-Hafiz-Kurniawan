@@ -204,7 +204,7 @@ def build_cv():
 
     p_deg = doc.add_paragraph()
     p_deg.paragraph_format.space_after = Pt(4)
-    r_deg = p_deg.add_run("S1 Teknologi Informasi — Fakultas Teknik (NIM: 20240140024)")
+    r_deg = p_deg.add_run("S1 Teknologi Informasi — Fakultas Teknik")
     r_deg.font.italic = True
     r_deg.font.color.rgb = TEXT_MUTED
     
